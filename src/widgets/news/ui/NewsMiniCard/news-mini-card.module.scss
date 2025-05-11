@@ -1,0 +1,64 @@
+@import 'src/@app/styles/variables';
+@import 'src/@app/styles/mixins';
+
+.card {
+    border-radius: 12px;
+    border: 1px solid $gray2;
+    text-decoration: none;
+    display: inline-block;
+    width: 100%;
+
+}
+.body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 32px;
+    box-sizing: border-box;
+    min-height: 280px;
+    @media (max-width: $tablet) {
+        padding: 20px;
+        min-height: 144px;
+    }
+}
+
+.title {
+    padding: 0;
+    margin: 0;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 120%;
+    color: $textDark;
+    @include lineclamp(4);
+
+    @media (max-width: $tablet) {
+        font-size: 11px;
+        line-height: 16px;
+        @include lineclamp(3);
+    }
+}
+.bottom {
+    display: flex;
+    align-items: center;
+}
+.svg {
+    margin-right: 8px;
+    @media (max-width: $tablet) {
+        width: 16px;
+        height: 16px;
+    }
+}
+.data {
+    padding: 0;
+    margin: 0;
+    line-height: 100%;
+    font-size: 15px;
+    color: $textDark2;
+
+    @media (max-width: $tablet) {
+        font-size: 11px;
+    }
+}
+.bottom {
+    color: $textDark2;
+}

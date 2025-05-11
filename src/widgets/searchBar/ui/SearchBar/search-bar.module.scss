@@ -1,0 +1,16 @@
+@import 'src/@app/styles/variables';
+@import 'src/@app/styles/mixins';
+
+.button {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    width: 44px;
+    height: 44px;
+    border-radius: 6px;
+    // border: 1px solid $gray2;
+    background-color: transparent;
+    @media (max-width: $tablet) {
+        display: flex;
+    }
+}

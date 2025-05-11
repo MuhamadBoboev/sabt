@@ -1,0 +1,54 @@
+@import 'src/@app/styles/variables';
+@import 'src/@app/styles/mixins';
+
+.wrapper {
+  max-width: 380px;
+}
+
+.body {
+  padding: 24px;
+  min-height: 280px;
+
+  button {
+    @media (max-width: $tablet) {
+      background-color: transparent;
+    }
+  }
+
+  svg {
+    stroke: $textWhite;
+  }
+}
+
+.bl_title {
+  margin-bottom: 24px;
+}
+
+.items {
+  margin-bottom: 24px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 20px;
+
+  @media (max-width: $tablet) {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.item:nth-child(3) {
+  grid-column-start: 1;
+  grid-column-end: 3;
+}
+
+.title {
+  padding: 0;
+  margin: 0;
+  font-size: 24px;
+  color: $textDark
+}
+
+.bl_buttons {
+  display: flex;
+  grid-gap: 10px;
+}

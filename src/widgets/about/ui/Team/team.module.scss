@@ -1,0 +1,83 @@
+@import 'src/@app/styles/variables';
+@import 'src/@app/styles/mixins';
+
+.header {
+    margin-bottom: 24px;
+}
+.about {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    // text-align: center;
+}
+.team_items {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-gap: 24px;
+    width: 100%;
+    margin-bottom: 40px;
+    
+    @media (max-width: $desktop) {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    @media (max-width: $tablet) {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+.team_item {
+    cursor: pointer;
+}
+.team_body {
+    width: 100%;
+    position: relative;
+    min-height: 300px;
+    border-radius: 8px;
+    overflow: hidden;
+
+    @media (max-width: $desktopSmall) {
+        min-height: 400px;
+    }
+    @media (max-width: $tabletSmall) {
+        min-height: 360px;
+    }
+    
+
+    &::before{
+        content: '';
+        padding-bottom: 50%;
+        display: block;
+    }
+
+    img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}
+
+.team_name {
+    color: $primary;
+    font-size: 20px;
+    font-weight: 500;
+    margin-top: 16px;
+    margin-bottom: 8px;
+
+    @media (max-width: $tablet) {
+        font-size: 18px;
+        margin-top: 12px;
+        margin-bottom: 2px;
+    }
+}
+
+.team_text {
+    padding-bottom: 5px;
+    margin: 0;
+    font-size: 16px;
+
+    @media (max-width: $tablet) {
+        font-size: 14px;
+    }
+}

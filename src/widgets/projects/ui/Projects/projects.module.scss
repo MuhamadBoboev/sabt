@@ -1,0 +1,17 @@
+@import 'src/@app/styles/variables';
+@import 'src/@app/styles/mixins';
+
+
+.projects {
+    display: flex;
+    flex-direction: column;
+    margin-top: 96px;
+
+    
+    @media (max-width: $desktopSmall) {
+        margin-top: 48px;
+    }
+    @media (max-width: $tablet) {
+        margin-top: 24px;
+    }
+}

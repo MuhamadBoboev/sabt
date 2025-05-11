@@ -1,0 +1,34 @@
+@import 'src/@app/styles/variables';
+@import 'src/@app/styles/mixins';
+
+.header {
+    align-items: end !important;
+
+    @media (max-width: $tablet) {
+        flex-direction: column;
+    }
+}
+.bl_title {
+    flex: 0 1 60%;
+    span {
+        color: $primary;
+    }
+    @media (max-width: $tablet) {
+        margin-bottom: 16px;
+    }
+}
+.bl_subtitle {
+    flex: 0 1 31%;
+    p {
+        padding: 0;
+        margin: 0;
+        font-size: 15px;
+        line-height: 160%;
+        color: $textDark;
+    }
+    @media (max-width: $tablet) {
+        font-size: 9px;
+        line-height: 133%;
+        letter-spacing: 0.6px;
+    }
+}

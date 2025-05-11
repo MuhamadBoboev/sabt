@@ -1,0 +1,41 @@
+@import 'src/@app/styles/variables';
+@import 'src/@app/styles/mixins';
+
+.section {
+    margin-top: 60px;
+}
+
+.items {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 24px;
+    box-sizing: border-box;
+    box-sizing: border-box;
+    margin-bottom: 24px;
+
+    @media (max-width: $tablet) {
+        grid-template-columns: 1fr;
+        grid-gap: 16px;
+    }
+}
+
+
+.bl_button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.button {
+    // display: none;
+    background-color: $newBlack !important;
+    border-color: $newBlack !important;
+    // @media (max-width:$tablet) {
+    //     display: flex;
+    // }
+}
+
+.link {
+    color: $white;
+    text-decoration: none;
+}

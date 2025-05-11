@@ -1,0 +1,75 @@
+@import 'src/@app/styles/variables';
+@import 'src/@app/styles/mixins';
+
+.wrapper {
+  max-width: 380px;
+}
+
+.body {
+  padding: 30px !important;
+  min-height: 300px !important;
+
+  button {
+    @media (max-width: $tablet) {
+      background-color: transparent;
+    }
+  }
+
+  svg {
+    stroke: $textWhite;
+  }
+}
+
+.bl_title {
+  margin-bottom: 32px;
+}
+
+.items {
+  margin-bottom: 32px;
+  display: flex;
+  flex-direction: column;
+  grid-gap: 20px;
+}
+
+.item:nth-child(3) {
+  grid-column-start: 1;
+  grid-column-end: 3;
+}
+
+.title {
+  padding: 0;
+  margin: 0;
+  font-size: 24px;
+  color: $textDark
+}
+
+.bl_buttons {
+  display: flex;
+  grid-gap: 10px;
+  box-sizing: border-box;
+}
+
+.loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  margin-top: 60px;
+
+  p{ 
+    font-size: 24px;
+    font-weight: 700;
+    // color: $primary;
+  }
+}
+
+.loading_body {
+  width: max-content;
+  height: max-content;
+}
+
+.textArea {
+  width: 100%;
+}

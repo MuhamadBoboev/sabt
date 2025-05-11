@@ -1,0 +1,49 @@
+@import 'src/@app/styles/variables';
+@import 'src/@app/styles/mixins';
+
+.content {
+    padding: 20px;
+}
+.title {
+    padding: 0;
+    margin: 0;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 120%;
+    color: $textDark;
+    margin-bottom: 4px;
+    @include lineclamp(1);
+
+    @media (max-width: $tablet) {
+        font-size: 20px;
+        font-weight: 700;
+        line-height: 120%;
+    }
+}
+
+.address {
+    padding: 0;
+    margin: 0;
+    font-size: 17px;
+    line-height: 164%;
+    color: $textDark2;
+    margin-bottom: 16px;
+    @include lineclamp(1);
+    
+    @media (max-width: $tablet) {
+        // background-color: red;
+    }
+}
+
+.tell {
+    margin: 0;
+    padding: 0;
+    font-size: 15px;
+    line-height: 160%;
+    font-weight: 700;
+    color: $primary;
+
+    @media (max-width: $tablet) {
+        // background-color: red;
+    }
+}

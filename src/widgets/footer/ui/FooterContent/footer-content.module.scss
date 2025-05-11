@@ -1,0 +1,128 @@
+@import 'src/@app/styles/variables';
+@import 'src/@app/styles/mixins';
+
+.footer {
+    display: flex;
+    grid-gap: 15px;
+    margin-bottom: 16px;
+    @media (max-width: $tablet) {
+        grid-gap: 24px;
+        flex-direction: row-reverse;
+        // flex-direction: column;
+    }
+
+    @media (max-width: $mobileLarge) {
+        // flex-direction: column;
+        // flex-direction: row-reverse;
+    }
+}
+
+.info_items {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    grid-gap: 10px;
+    margin-bottom: 24px;
+
+    @media (max-width: $tablet) {
+        margin-bottom: 16px;
+    }
+} 
+.link_svg {
+    margin-bottom: 24px;
+    @media (max-width: $tablet)  {
+        width: 120px;
+        height: 28px;
+    }
+}
+
+.info_item {
+    text-decoration: none;
+    color: $newBlack;
+}
+.left {
+    flex: 1 1 35%;
+    
+    @media (max-width: $tablet) {
+        flex: 0 1 max-content;
+    }
+    
+    @media (max-width: $mobileLarge) {
+        order: 1;
+    }
+}
+
+.left_body {
+    display: flex;
+    flex-direction: column;
+}
+
+.button {
+    width: max-content;
+
+    @media (max-width: $tablet) {
+        width: 100%;
+    }
+}
+
+.right {
+    flex: 1 1 60%;
+    @media (max-width: $tablet) {
+    flex: 1 1 auto;
+    }
+}
+
+.right_body {
+    width: 100%;
+}
+
+.nav {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+
+}
+.nav {
+    display: flex;
+    justify-content: end;
+}
+
+.list {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    grid-gap: 24px;
+
+    @media (max-width: $desktopSmall) {
+        flex-direction: column;
+        align-items: end;
+        grid-gap: 16px;
+    }
+
+    @media (max-width: $tablet) {
+        grid-gap: 0px;
+    }
+}
+
+.item {
+    width: max-content;
+    box-sizing: border-box;
+}
+
+.link {
+    display: inline-block;
+    font-size: 18px;
+    text-decoration: none;
+    color: $newBlack;
+    width: max-content;
+    padding: 8px;
+    box-sizing: border-box;
+    transition: all .2;
+
+    &:hover {
+        color: lighten($newBlack, 40%);
+        transition: all .2;
+    }
+}

@@ -1,0 +1,79 @@
+@import 'src/@app/styles/variables';
+@import 'src/@app/styles/mixins';
+
+.footer_top {
+    display: flex;
+    justify-content: space-between;
+    // border-bottom: 1px solid $white;
+    padding-bottom: 48px;
+    margin-bottom: 48px;
+    @media (max-width: $tablet) {
+        flex-direction: column;
+        align-items: center;
+        padding-bottom: 24px;
+        margin-bottom: 24px;
+    }
+}
+.link_button {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    list-style: none;
+    // color: $newDark;
+    font-size: 17px;
+
+    &:hover {
+        color: darken($color: $white, $amount: 10%);
+        svg {
+            stroke: darken($color: $white, $amount: 10%);
+        }
+    }
+    @media (max-width: $tablet) {
+        margin-bottom: 24px;
+    }
+}
+.link_svg {
+    stroke: none;
+    fill: $primary;
+    width: 44px;
+    height: 44px;
+    margin-right: 12px;
+
+    @media (max-width: $tablet) {
+        
+    }
+   
+}
+.contacts {
+    display: flex;
+    align-items: center;
+    @media (max-width: $tablet) {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 5px;
+        width: 100%;
+    }
+}
+.tell {
+    text-decoration: none;
+    list-style: none;
+    color: $textWhite;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 100%;
+    margin-right: 40px;
+    @media (max-width: $tablet) {
+        display: flex;
+        justify-content: center;
+        font-size: 13px;
+        margin-top: 0;
+    }
+}
+.button {
+    @media (max-width: $tablet) {
+        padding: 12px !important;
+        width: 100% ;
+        border-radius: 8px !important;
+        font-size: 9.3px !important;
+    }
+}

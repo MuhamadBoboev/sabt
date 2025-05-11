@@ -1,0 +1,8 @@
+@import 'src/@app/styles/variables';
+@import 'src/@app/styles/mixins';
+
+.Divider {
+  width: 100%;
+  height: 1px;
+  background: $gray2;
+}

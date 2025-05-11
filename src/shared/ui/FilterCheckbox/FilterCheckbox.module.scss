@@ -1,0 +1,132 @@
+@import 'src/@app/styles/variables';
+@import 'src/@app/styles/mixins';
+
+/* *********** label ************* */
+.filter_item {
+	display: none;
+
+	// margin-bottom: 16px;
+	@media (min-width: $desktop) {
+		display: inherit;
+	}
+}
+
+.item_label {
+	display: flex;
+	cursor: pointer;
+	grid-gap: 10px;
+	width: max-content;
+	align-items: center;
+	border-radius: 4px;
+	transition: all 250ms ease-in-out;
+}
+
+.item_input {
+	display: none;
+}
+
+.filter_fake {
+	display: inline-block;
+	width: 28px;
+	height: 28px;
+	background-color: $primary;
+	position: relative;
+	// outline: 1px solid blue;
+	border-radius: 5px;
+
+
+	@media (max-width: $desktop) {
+		width: 20px;
+		height: 20px;
+	}
+
+	@media (max-width: $tabletSmall) {
+		width: 18px;
+		height: 18px;
+	}
+}
+
+.filter_fake::after {
+	outline: 1px solid $gray2;
+	position: absolute;
+	content: '';
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	transition: all 0.2s;
+	background-color: white;
+	border-radius: 5px;
+	opacity: 1;
+}
+
+
+.item_input:checked+.filter_fake::after {
+	opacity: 0;
+}
+
+.filter_fake::before {
+	position: absolute;
+	content: '';
+	top: 50%;
+	left: 50%;
+	width: 14px;
+	height: 14px;
+	transform: translate(-50%, -50%);
+	transition: all 0.2s;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: contain;
+	background-image: url('./../../../../public/assets/icons/checked_black.svg');
+	z-index: 1;
+	display: block;
+	opacity: 0;
+
+	@media (max-width: $tabletSmall) {
+		width: 10px;
+		height: 10px;
+	}
+}
+
+.item_input:checked+.filter_fake::before {
+	opacity: 1;
+}
+
+.item_input:checked~.filter_text {
+	color: #1F2A37
+}
+
+.text_body {
+	display: flex;
+	flex-direction: column;
+}
+
+.filter_text {
+	font-size: 9px;
+	line-height: 12px;
+	color: $gray1;
+
+	@media (min-width: $tabletSmall) {
+		font-size: 9px;
+	}
+
+	@media (min-width: $desktop) {
+		font-size: 9px;
+	}
+}
+
+.filter_title {
+	font-size: 13px;
+	line-height: 20px;
+	font-weight: 600;
+	color: $textDark;
+	// color: blue;
+
+	@media (min-width: $tabletSmall) {
+		font-size: 13px;
+	}
+
+	@media (min-width: $desktop) {
+		font-size: 15px;
+	}
+}

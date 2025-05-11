@@ -1,0 +1,116 @@
+@import 'src/@app/styles/variables';
+@import 'src/@app/styles/mixins';
+
+.timeline {
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+  // background-color: #111;
+}
+
+.outer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.card {
+  position: relative;
+  max-width: 400px;
+  // margin: 10px 0;
+
+  &.odd {
+    padding: 30px 0 30px 30px;
+  }
+
+  &.even {
+    padding: 30px 30px 30px 0;
+  }
+
+  &::before {
+    content: '';
+    position: absolute;
+    width: 50%;
+    border: solid #ebeef1;
+  }
+
+  &.odd::before {
+    left: 0;
+    top: -4.5px;
+    bottom: -4.5px;
+    border-width: 5px 0 5px 5px;
+    border-radius: 50px 0 0 50px;
+  }
+
+  &.even::before {
+    right: 0;
+    top: 0;
+    bottom: 0;
+    border-width: 5px 5px 5px 0;
+    border-radius: 0 50px 50px 0;
+  }
+
+  &:first-child::before {
+    border-top: 0;
+    border-top-left-radius: 0;
+  }
+
+  &:last-child.odd::before,
+  &:last-child.even::before {
+    border-bottom: 0;
+  }
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  background: #ebeef1;
+  color: $newBlack;
+  border-radius: 8px;
+  padding: 20px;
+
+  @media (max-width: $tablet) {
+    padding: 16px;
+  }
+}
+
+.title {
+  color: $primary;
+  position: relative;
+  margin: 0;
+  margin-bottom: 8px;
+  font-size: 20px;
+
+  @media (max-width: $tablet) {
+    font-size: 16px;
+  }
+
+  &::before {
+    content: '';
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background: white;
+    border-radius: 50%;
+    border: 3px solid #ebeef1;
+  }
+
+  .odd &::before {
+    left: -45px;
+  }
+
+  .even &::before {
+    right: -45px;
+  }
+}
+
+.text {
+  font-size: 14px;
+  margin: 0;
+  line-height: 1.5;
+  margin: 0;
+  
+  @media (max-width: $tablet) {
+    font-size: 12px;
+  }
+}

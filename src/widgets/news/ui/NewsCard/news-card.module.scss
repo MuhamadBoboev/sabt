@@ -1,0 +1,44 @@
+@import 'src/@app/styles/variables';
+@import 'src/@app/styles/mixins';
+
+.content {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+
+    @media (max-width: $tablet) {
+        padding: 8px;
+    }
+}
+.text {
+    font-size: 20px;
+    line-height: 120%;
+    color: $textDark;
+    font-weight: 500;
+    margin: 0;
+    padding: 0;
+    @include lineclamp(3);
+    margin-bottom: 64px;
+    
+    @media (max-width: $tablet) {
+        margin-bottom: 22px;
+        font-size: 8.13px;
+        @include lineclamp(2);
+    }
+}
+
+.date {
+    @media (max-width: $tablet) {
+        grid-gap: 3px !important;
+        p {
+            padding: 0;
+            margin: 0;
+            font-size: 5.23px !important;
+            line-height: 100%;
+        }
+        svg {
+            width: 7.61px !important;
+            height: 7.61px !important;
+        }
+    }
+}

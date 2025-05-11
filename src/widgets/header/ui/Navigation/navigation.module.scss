@@ -1,0 +1,228 @@
+@import 'src/@app/styles/variables';
+@import 'src/@app/styles/mixins';
+@import 'src/@app/styles/colors';
+@import 'menu-animation';
+
+.nav {
+  @media (max-width: $desktopSmall) {
+    order: 3;
+  }
+}
+
+
+.menu {
+  @media (max-width: $desktopSmall) {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    background: $white;
+    padding: 16px;
+    opacity: 0;
+    transition: all 250ms;
+    pointer-events: none;
+    transform: translateX(100%);
+    z-index: 11;
+    display: flex;
+    flex-direction: column;
+  }
+
+
+}
+
+.button {
+  display: none !important;
+
+  @media (max-width: $desktopSmall) {
+    display: inline-block !important;
+    margin-bottom: 16px;
+    font-size: 13px;
+  }
+}
+
+.open {
+  width: 255px;
+  @media (max-width: $desktopSmall) {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translateX(0);
+    overflow: auto;
+
+    .item {
+      animation: {
+        name: menuAnimation;
+        fill-mode: forwards;
+        duration: 250ms;
+      }
+    }
+  }
+}
+
+.list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+
+  @media (max-width: $desktopSmall) {
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: 20px;
+    padding-top: 16px;
+    padding-bottom: 16px;
+    border-top: 1px solid $gray3;
+    border-bottom: 1px solid $gray3;
+    margin-bottom: 16px;
+  }
+}
+
+.item {
+  margin-right: 28px;
+
+  @include animationDelayItems(4) {
+    @media (max-width: $tablet) {
+      @include from;
+    }
+  }
+
+  @media (max-width: $desktopSmall) {
+    margin: 0 0 20px;
+
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+  }
+
+  &:last-of-type {
+    margin-right: 0;
+  }
+}
+
+.link {
+  font-size: 20px;
+  line-height: 160%;
+  font-weight: 400;
+  transition: all 250ms;
+  color: $newBlack;
+  text-decoration: none;
+
+  @media (max-width: $desktop) {
+    font-size: 15px;
+    line-height: 1.6;
+  }
+
+  @media (max-width: $tablet) {
+    font-size: 15px;
+    line-height: 32px;
+  }
+
+  &:hover {
+    color: lighten($newBlack, 40%)
+  }
+}
+
+.active {
+  color: $primary;
+}
+
+.lang_button {
+  display: none;
+  @media (max-width: $desktopSmall) {
+    display: block;
+    padding-bottom: 16px;
+    border-bottom: 1px solid $gray3;
+  }
+}
+
+
+.phone_bl {
+  display: none;
+  text-decoration: none;
+  align-items: center;
+
+  @media (max-width: $desktopSmall) {
+    display: flex;
+  }
+}
+
+.link {
+  text-decoration: none;
+}
+
+.phone_svg {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 24px;
+  height: 24px;
+  margin-right: 8px;
+  
+  svg {
+    fill: none;
+  }
+}
+
+.phone {
+  display: flex;
+  flex-direction: column;
+}
+
+.phone_link {
+  text-decoration: none;
+  font-size: 20px;
+  line-height: 1.64;
+  color: $textDark;
+  display: block;
+  text-decoration: none;
+  transition: all 250ms;
+
+  span {
+    display: block;
+  }
+
+  @media (max-width: 920px) {
+    font-size: 15px;
+    line-height: 1.6;
+  }
+
+  &:hover {
+    color: $primary;
+  }
+}
+
+.footer {
+  display: none;
+  justify-content: center;
+  align-items: end;
+  width: 100%;
+  height: max-content;
+  padding-bottom: 16px;
+  @media (max-width: $tablet) {
+    display: flex;
+  }
+}
+.logo {
+  margin-top: 8px;
+}
+.logo_bl {
+  display: none;
+  @media (max-width: $desktopSmall) {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+.open_wrapper {
+  position: fixed;
+  content: '';
+  height: 100%;
+  width: 100%;
+  left: 0;
+  top: 0;
+  background-color: #8E8D8D;
+  opacity: 0.6;
+  z-index: 10;
+}

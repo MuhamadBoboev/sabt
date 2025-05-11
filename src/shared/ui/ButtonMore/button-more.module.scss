@@ -1,0 +1,23 @@
+@import 'src/@app/styles/variables';
+@import 'src/@app/styles/mixins';
+
+.body {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+}
+
+.text {
+    padding: 0;
+    margin: 0;
+    color: $primary;
+    cursor: pointer;
+    font-size: 15px;
+    line-height: 160%;
+
+    @media (max-width: $tablet) {
+        font-size: 16px;
+        font-weight: 700;
+        line-height: 145%;
+    }
+}

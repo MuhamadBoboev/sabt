@@ -1,0 +1,19 @@
+@import 'mixins';
+
+// Onest: 400 & 500 & 700
+// @include font-face(
+//   $name: 'Onest',
+//   $weight: 400,
+//   $ttf: '/assets/fonts/Onest-Regular.ttf'
+// );
+@include font-face(
+  $name: 'Formular',
+  $weight: 500,
+  $ttf: '/assets/fonts/Formular-Medium.ttf'
+);
+// @include font-face(
+//   $name: 'Onest',
+//   $weight: 700,
+//   $ttf: '/assets/fonts/Onest-Bold.ttf'
+// );
+

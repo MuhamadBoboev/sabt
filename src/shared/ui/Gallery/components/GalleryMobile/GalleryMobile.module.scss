@@ -1,0 +1,141 @@
+@import 'src/@app/styles/variables';
+@import 'src/@app/styles/mixins';
+
+.wrapper {
+	// padding: 0;
+	// margin: 0 -16px;
+}
+
+.GalleryMobile {
+	margin-bottom: 40px;
+
+	@media (max-width: $tablet) {
+		margin-bottom: 0px;
+	}
+}
+
+.Image {
+	border-radius: 12px;
+	overflow: hidden;
+	width: 100%;
+	height: 220px;
+	max-width: 100%;
+	object-fit: cover;
+	margin: 0 0 16px;
+
+	@media (min-width: 390px) {
+		height: 230px;
+	}
+
+	@media (min-width: 440px) {
+		height: 260px;
+	}
+
+	@media (min-width: $tabletSmall) {
+		height: 348px;
+	}
+}
+
+.Info {
+	margin-bottom: 16px;
+	padding: 0 16px;
+
+	@media (min-width: $tabletSmall) {
+		margin-top: 56px;
+	}
+}
+
+.buttons_wrapper {
+	overflow: auto;
+	padding-bottom: 10px;
+	border-bottom: 1px solid $gray2;
+}
+
+.buttons {
+	display: flex;
+	grid-gap: 8px;
+	width: max-content;
+	overflow: auto;
+}
+
+.address_button {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 8px;
+	background-color: $gray2;
+	border-radius: 8px;
+	overflow: hidden;
+	grid-gap: 8px;
+	// margin: 0 0 16px;
+	max-width: 110px;
+
+	@media (min-width: $tabletSmall) {
+		// margin-bottom: 12px;
+	}
+
+	svg {
+		stroke: $primary;
+		// margin-right: 8px;
+	}
+}
+.open {
+	max-width: 100%;
+	.Address {
+		width: max-content;
+	}
+}
+.views_button {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 8px;
+	background-color: $gray2;
+	border-radius: 8px;
+	grid-gap: 8px;
+
+
+	@media (min-width: $tabletSmall) {
+		// margin-bottom: 12px;
+	}
+
+	svg {
+		stroke: $primary;
+	}
+
+	p {
+		font-size: 11px;
+		color: $textDark;
+		font-weight: 700;
+	}
+}
+
+.Address {
+	font-size: 11px;
+	line-height: 16px;
+	letter-spacing: 0.4px;
+	color: $textDark2;
+	display: inline-flex;
+	align-items: center;
+	font-weight: 700;
+	color: $textDark;
+	width: 124px;
+	@include lineclamp(1);
+	// margin: 0 0 16px;
+
+}
+
+.Title {
+	font-weight: 700;
+	font-size: 24px;
+	line-height: 28px;
+	color: $textDark;
+	margin: 0;
+	margin-bottom: 12px;
+
+	@media (min-width: $tabletSmall) {
+		font-size: 28px;
+		line-height: 32px;
+	}
+}
+

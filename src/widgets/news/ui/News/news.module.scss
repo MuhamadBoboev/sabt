@@ -1,0 +1,36 @@
+@import 'src/@app/styles/variables';
+@import 'src/@app/styles/mixins';
+
+.news {
+    margin-top: 96px;
+
+    
+    @media (max-width: $desktopSmall) {
+        margin-top: 48px;
+    }
+
+    @media (max-width: $tablet) {
+        margin-top: 24px;
+    }
+}
+.wrapper {
+    
+}
+.items {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr ;
+    grid-gap: 48px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+    @media (max-width: $desktopSmall) {
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 20px;
+    }
+
+    @media (max-width: $tablet) {
+        grid-gap: 16px;
+    }
+}
+

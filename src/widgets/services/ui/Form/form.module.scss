@@ -1,0 +1,145 @@
+@import 'src/@app/styles/variables';
+@import 'src/@app/styles/mixins';
+
+.wrapper {
+  max-width: 380px;
+}
+
+.form {
+  padding-top: 24px;
+  text-align: center;
+  @media (max-width: $tablet) {
+    width: 100%;
+  }
+}
+.title {
+  text-align: center;
+  font-size: 40px;
+  line-height: 100%;
+  margin: 0;
+  margin-bottom: 36px;
+
+  @media (max-width: $tablet) {
+    font-size: 32px;
+    margin-bottom: 24px;
+  }
+}
+
+.body {
+  padding: 24px;
+  min-height: 280px;
+
+  @media (max-width: $tablet) {
+    padding: 16px;
+  }
+
+  button {
+    @media (max-width: $tablet) {
+      background-color: transparent;
+    }
+  }
+
+  svg {
+    stroke: $textWhite;
+  }
+}
+
+.bl_title {
+  margin-bottom: 24px;
+}
+
+.items {
+  margin-bottom: 24px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 20px;
+
+  @media (max-width: $tablet) {
+    display: flex;
+    flex-direction: column;
+    grid-gap: 8px;
+  }
+}
+
+.item:nth-child(5) {
+  grid-column-start: 1;
+  grid-column-end: 3;
+}
+
+// .item:nth-child(4) {
+//   grid-column-start: 1;
+//   grid-column-end: 3;
+// }
+
+
+.bl_buttons {
+  display: flex;
+  grid-gap: 10px;
+}
+
+.select {
+  width: 100%;
+  padding: 12px 16px;
+  border: 1px solid $gray3;
+  border-radius: 8px;
+  background-color: white;
+  font-size: 16px;
+  color: $textDark;
+  min-height: 56px;
+  appearance: none; /* Убираем стандартную стрелку */
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  position: relative;
+  transition: all 0.3s ease;
+
+  /* Кастомная стрелка с помощью background-image */
+  background-image: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" width="10" height="6" viewBox="0 0 10 6"%3E%3Cpath d="M0 0l5 5 5-5z" fill="none" stroke="%23999" stroke-width="1.5"/%3E%3C/svg%3E');
+  background-repeat: no-repeat;
+  background-position: right 16px center; /* Позиция стрелки */
+  background-size: 10px 6px;
+
+  /* Эффект при фокусе */
+  &:focus {
+    border-color: $newBlack;
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  }
+
+  /* Адаптивность для планшетов */
+  @media (max-width: $tablet) {
+    font-size: 14px;
+    padding: 10px 12px;
+  }
+
+  /* Стиль для опций */
+  option {
+    font-size: 16px;
+    padding: 8px;
+    background-color: white;
+    color: $textDark;
+    border: none;
+  }
+
+  /* Для выделенной опции */
+  option:checked {
+    background-color: $newBlack;
+    color: white;
+  }
+
+  /* Добавление плавности для изменений фокуса */
+  &:hover {
+    border-color: $newBlack;
+  }
+}
+
+
+.error {
+  color: red;
+  font-size: 12px;
+  margin-top: 4px;
+}
+
+.label {
+  display: block;
+  margin-bottom: 8px;
+}

@@ -1,0 +1,62 @@
+@import 'src/@app/styles/variables';
+@import 'src/@app/styles/mixins';
+
+.wrapper {
+  // background-color: $gray50;
+  margin-bottom: -120px;
+    @media (max-width: $desktop) {
+      margin-bottom: -70px;
+    }  
+    @media (max-width: $tablet) {
+        margin-bottom: -32px;
+    }
+}
+.application {
+  display: flex;
+  justify-content: space-between;
+  padding: 48px 0;
+  overflow: hidden;
+  align-items: flex-start;
+
+  @media (max-width: $tablet) {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 24px 0;
+  }
+}
+
+.left {
+  display: flex;
+  align-items: flex-start;
+  flex-basis: 50%;
+
+  @media (max-width: $tablet) {
+    flex-grow: 1;
+    margin-bottom: 20px;
+  }
+}
+
+.title {
+  padding: 0;
+  margin: 0;
+  font-size: 36px;
+  line-height: 114%;
+  font-weight: 600;
+  color: $textDark;
+
+  @media (max-width: $tablet) {
+    font-size: 20px;
+  }
+}
+
+.button {
+  height: max-content;
+}
+
+.right {
+  flex: 0 1 48%; 
+
+  @media (max-width: $tablet) {
+    width: 100%;
+  }
+}

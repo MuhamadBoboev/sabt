@@ -1,0 +1,33 @@
+@import 'src/@app/styles/variables';
+@import 'src/@app/styles/mixins';
+
+.wrapper {
+    padding-bottom: 48px;
+    
+    @media (max-width: $tablet) {
+        // margin-top: 28px;    
+    }
+}
+.items {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 48px;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+
+    @media (max-width: $desktop) {
+        grid-gap: 30px;
+    }
+
+    @media (max-width: $desktopSmall) {
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-gap: 26px;
+    }
+
+    @media (max-width: $tablet) {
+        grid-template-columns: 1fr 1fr;
+        grid-row-gap: 24px;
+        grid-column-gap: 16px;
+    }
+}

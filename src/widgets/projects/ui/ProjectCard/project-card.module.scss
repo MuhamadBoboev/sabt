@@ -1,0 +1,158 @@
+@import 'src/@app/styles/variables';
+@import 'src/@app/styles/mixins';
+
+.card {
+    min-height: 320px;
+    height: 100%;
+    box-sizing: border-box;
+    display: flex;
+    align-items: end;
+    border-radius: 16px;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    text-decoration: none;
+    @media (max-width: $desktop) {
+        min-height: 300px;
+    }
+    @media (max-width: $tablet) {
+        border-radius: 16px;
+    }
+    @media (max-width: $tabletSmall) {
+        min-height: 300px;
+    }
+    &::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgba(0, 0, 0, 0.4); 
+        z-index: 1; 
+      }
+      
+}
+.image {
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+.content {
+    z-index: 1;
+    display: flex;
+    justify-content: flex-start;
+    align-items: end;
+    position: relative; 
+    z-index: 2;
+    margin-left: 40px;
+    margin-bottom: 40px;
+    @media (max-width: $tablet) {
+        margin-left: 24px;
+        margin-bottom: 24px;
+    }
+}
+.bl_subtitle {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    @media (max-width: $tablet) {
+        margin-bottom: 16px;
+    }
+}
+.subtitle {
+    color: $white;
+    font-size: 13px;
+    font-weight: 700;
+    padding: 0;
+    margin: 0;
+    line-height: 100%;
+    @media (max-width: $tablet) {
+        font-size: 9px;
+    }
+
+}
+.body {
+    display: flex;
+    flex-direction: column;
+    height: max-content;
+}
+
+.title {
+    color: $white;
+    font-size: 28px;
+    font-weight: 700;
+    margin: 0;
+    padding: 0;
+    margin-bottom: 20px;
+    @media (max-width: $tablet) {
+        font-size: 20px;
+        margin-bottom: 16px;
+    }
+}
+.svg {
+    stroke: $white;
+    fill: transparent;
+    margin-right: 8px;
+    @media (max-width: $tablet) {
+        width: 16px;
+        height: 16px;
+        margin-right: 6px;
+    }
+}
+.items  {
+    display: flex;
+    grid-gap: 12px;
+    @media (max-width: $tablet) {
+        grid-gap: 9px;
+    }
+}
+.item {
+    padding: 8px 12px;
+    border-radius: 8px;
+    overflow: hidden;
+    background-color: $white;
+    @media (max-width: $tablet) {
+        padding: 8px 10px;
+    }
+}
+.item:first-child {
+    padding-left: 32px;
+    position: relative;
+
+    &::after {
+        content: '';
+        position: absolute;
+        top: 50%;
+        transform: translate(0, -50%);
+        left: 12px;
+        width: 12px;
+        height: 12px;
+        border-radius: 50%;
+        overflow: hidden;
+        background-color: $primary;
+    } 
+    @media (max-width: $tablet) {
+        padding-left: 26px;
+        &::after {
+            left: 10px;
+            width: 10px;
+            height: 10px;
+        }
+    }
+}
+.item_text {
+    color: $textDark2;
+    padding: 0;
+    margin: 0;
+    font-size: 13px;
+    line-height: 100%;
+    @media (max-width: $tablet) {
+        font-size: 9px;
+    }
+}

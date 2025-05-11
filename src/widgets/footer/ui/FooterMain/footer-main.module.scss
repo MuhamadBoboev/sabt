@@ -1,0 +1,30 @@
+@import 'src/@app/styles/variables';
+@import 'src/@app/styles/mixins';
+
+.wrapper {
+    // margin-top: 120px;
+    border-top: 1px solid $gray2;
+    
+    // @media (max-width: $desktop) {
+    //     margin-top: 70px;
+    // }  
+    // @media (max-width: $tablet) {
+    //     margin-top: 32px;
+    // }
+}
+.footer {
+    margin-top: 80px;
+    margin-bottom: 24px;
+    @media (max-width: $tablet) {
+        margin-top: 24px;
+    }
+}
+
+.bl_text {
+    display: flex;
+    justify-content: center;
+}
+
+.text {
+    color: $gray2;
+}

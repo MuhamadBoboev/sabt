@@ -1,0 +1,94 @@
+@import 'src/@app/styles/variables';
+@import 'src/@app/styles/mixins';
+
+.item {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+
+  &:last-of-type {
+    .chevron {
+      display: none;
+    }
+  }
+}
+
+.link {
+  font-size: 15px;
+  line-height: 20px;
+  color: $gray1;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+
+  @media (max-width: $desktopSmall) {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 12px;
+    color: $textDark2;
+  }
+
+  &:hover {
+    .label {
+      &::after {
+        transform: scaleX(1);
+      }
+    }
+  }
+
+  svg {
+    stroke: $gray1;
+    fill: $gray1;
+    margin-right: 16px;
+
+    @media (max-width: $desktopSmall) {
+      margin-right: 10px;
+      width: 12px;
+      height: 12px;
+    }
+  }
+}
+
+.active {
+  .link {
+    color: $textDark;
+  }
+
+  .label {
+    &:hover {
+      &::after {
+        display: none;
+      }
+    }
+  }
+}
+
+.chevron {
+  margin: 0 8px;
+  stroke: $textDark;
+  fill: $textDark;
+
+  @media (max-width: $desktopSmall) {
+    margin: 0 8px;
+    width: 5px;
+    height: 9px;
+  }
+}
+
+.label {
+  position: relative;
+
+  &::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 1px;
+    background: $gray1;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    transform: scaleX(0);
+    transition: all 250ms;
+  }
+}

@@ -1,0 +1,27 @@
+@import 'src/@app/styles/variables';
+@import 'src/@app/styles/mixins';
+
+.socials {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+.items {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.link {
+    display: inline-block;
+    padding: 5px;
+    text-decoration: none;
+    color: $newBlack;
+    box-sizing: border-box;
+
+    &:hover {
+        color: lighten($newBlack, 40%);
+    }
+}

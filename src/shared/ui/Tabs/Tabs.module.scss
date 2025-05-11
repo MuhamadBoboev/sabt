@@ -1,0 +1,126 @@
+@import 'src/@app/styles/variables';
+@import 'src/@app/styles/mixins';
+
+.Tabs {
+	width: 100%;
+}
+
+
+.List {
+	padding: 0px;
+	list-style: none;
+	margin: 0;
+	display: flex;
+	// justify-content: flex-start;
+	width: 100%;
+	// overflow: auto;
+	margin: 0 !important;
+	// background-color: $gray3;
+	// border-radius: 12px;
+	overflow-y: scroll;
+
+	&::-webkit-scrollbar {
+		opacity: 0;
+		display: none;
+	}
+
+	@media (min-width: $tablet) {
+		width: max-content;
+	}
+
+}
+
+.body_tabs {
+	display: flex;
+	justify-content: space-between;
+	grid-gap: 15px;
+	margin-bottom: 20px;
+	flex-direction: column;
+	align-items: center;
+
+	@media (min-width: $tablet) {
+		align-items: center;
+		margin-bottom: 32px;
+	}
+
+	@media (min-width: $desktop) {
+		flex-direction: row;
+		align-items: center;
+		margin-bottom: 48px;
+	}
+
+	@media (min-width: $desktop) {
+		margin-bottom: 48px;
+	}
+}
+
+.Item {
+	// margin-right: 16px;
+
+
+	@media (min-width: $desktop) {
+		// margin-right: 24px;
+	}
+
+	&:last-of-type {
+		margin-right: 0;
+	}
+}
+
+.Button {
+	background: none;
+	border: none;
+	color: $textDark3;
+	padding: 8px 10px;
+	box-sizing: border-box;
+	white-space: nowrap;
+	cursor: pointer;
+	display: block;
+	position: relative;
+	transition-property: color;
+	transition-duration: 250ms;
+	font-family: inherit;
+	font-weight: 400;
+	font-size: 11px;
+	line-height: 16px;
+	-webkit-tap-highlight-color: transparent;
+
+	@media (min-width: $tablet) {
+		font-size: 17px;
+		line-height: 20px;
+		padding: 12px 14px;
+	}
+	@media (min-width: $desktop) {
+		// font-size: 15px;
+		line-height: 24px;
+	}
+
+	&.Active {
+		color: $textDark;
+		// font-weight: 600;
+	}
+
+	span {
+		position: relative;
+		z-index: 2;
+	}
+	
+}
+// .greenaActive {
+// 	span {
+// 		font-weight: 600;
+// 		color: $white;
+// 	}
+// 	.Tracker {
+// 		background-color: $green;
+// 	}	
+// }
+.Tracker {
+	background: $primary;
+	// border-radius: 8px;
+	position: absolute;
+	bottom: 0px;
+	left: 0;
+	width: 100%;
+	height: 1px;
+}

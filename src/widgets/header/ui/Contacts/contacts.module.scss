@@ -1,0 +1,98 @@
+@import 'src/@app/styles/variables';
+@import 'src/@app/styles/mixins';
+
+.contacts {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  // flex-basis: 35%;
+  // flex-grow: 1;
+
+  @media (max-width: $tablet) {
+    width: 100%;
+    margin-right: 5px;
+  }
+}
+
+.mainPage {
+  .phone {
+    color: $textDark;
+  }
+}
+
+.phone_bl {
+  display: flex;
+  text-decoration: none;
+  align-items: center;
+  border-right: 1px solid $gray3;
+  padding-right: 24px;
+  margin-right: 24px;
+
+
+  @media (max-width: $tablet) {
+    display: none;
+  }
+}
+
+.link {
+  text-decoration: none;
+}
+
+.phone_svg {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 24px;
+  height: 24px;
+  margin-right: 8px;
+  // border: 1px solid red;
+  // border-radius: 50%;
+  // margin-right: 12px;
+
+  svg {
+    fill: none;
+  }
+}
+
+.phone {
+  display: flex;
+  flex-direction: column;
+}
+
+.phone_link {
+  text-decoration: none;
+  font-size: 15px;
+  line-height: 1.64;
+  color: $textDark;
+  display: block;
+  text-decoration: none;
+  transition: all 250ms;
+
+  span {
+    display: block;
+  }
+
+  @media (max-width: 920px) {
+    font-size: 15px;
+    line-height: 1.6;
+  }
+
+  &:hover {
+    color: $primary;
+  }
+}
+
+.button {
+  // margin-right: 20px;
+
+  @media (max-width: $desktopSmall) {
+    display: none;
+    margin-right: 20px;
+  }
+}
+
+.lang_button {
+  @media (max-width: $tablet) {
+    display: none;
+  }
+}

@@ -1,0 +1,112 @@
+@import 'src/@app/styles/variables';
+@import 'src/@app/styles/mixins';
+
+.Pagination {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin-bottom: 0;
+  width: 100%;
+  overflow: auto;
+  justify-content: center;
+  margin-top: 28px;
+
+  @media (min-width: $tablet) {
+    margin-top: 32px;
+  }
+
+  @media (min-width: $desktop) {
+    margin-top: 48px;
+  }
+}
+
+.Page {
+  margin-right: 4px;
+
+  a {
+    min-width: 32px;
+    border-radius: 8px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-weight: 700;
+    font-size: 13px;
+    color: $black;
+    // border: 1px solid #DFE3E8;
+    box-sizing: border-box;
+  }
+}
+
+.ActivePage {
+  a {
+    color: $black;
+    background: $primary;
+    cursor: not-allowed;
+    border-color: $primary;
+  }
+}
+
+.type_2 {
+  a {
+    color: $white;
+    background: $green;
+    cursor: not-allowed;
+    border-color: $primary;
+  }
+}
+li.Prev {
+  margin-right: 4px;
+}
+
+li.Next,
+li.Prev {
+  background: none;
+
+  a {
+    width: 32px;
+    height: 32px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    // background: $primary;
+    border-radius: 4px;
+    border: none;
+
+    &[aria-disabled=true] {
+      cursor: not-allowed;
+      // background: #DFE3E8;
+
+      svg {
+        stroke: #70757E;
+      }
+    }
+  }
+  svg {
+    stroke: $black;
+  }
+}
+
+.Disabled {
+  cursor: not-allowed;
+  background: #DFE3E8;
+}
+
+.Break {
+  margin-right: 4px;
+
+  a {
+    color: $secondary;
+    font-family: 'Manrope', sans-serif;
+    font-weight: 800;
+    font-size: 13px;
+    line-height: 20px;
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}

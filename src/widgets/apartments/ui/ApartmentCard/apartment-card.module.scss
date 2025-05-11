@@ -1,0 +1,132 @@
+@import 'src/@app/styles/variables';
+@import 'src/@app/styles/mixins';
+
+.card {
+    display: flex;
+    flex-direction: column;
+    border-radius: 12px;
+    border: 1px solid $gray2;
+    overflow: hidden;
+    @media (max-width: $tablet) {
+        border-radius: 6px;
+    }
+}
+.top {
+    border-bottom: 1px solid $gray2;
+}
+.bl_img {
+    position: relative;
+    width: 100%;
+    &::after {
+        content: '';
+        padding-bottom: 64%;
+        display: block;
+    }
+}
+.img {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    right: 0;
+    bottom: 0;
+    width: 80%;
+    height: 80%;
+    transform: translate(-50%, -50%);
+    object-fit: contain;
+}
+.img_skeleton {
+    height: 200px;
+    @media (max-width: $tablet) {
+        height: 100px;
+    }
+}
+
+.skeleton_item {
+    height: 20px;
+    @media (max-width: $tablet) {
+        height: 15px;
+    }
+}
+
+.skeleton_button {
+    height: 50px;
+    @media (max-width: $tablet) {
+        height: 30px;
+    }
+}
+.body {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    @media (max-width: $tablet) {
+        padding: 10px;
+    }
+}
+
+.button {
+    @media (max-width: $tablet) {
+        padding-left: 0;
+        padding-right: 0;
+        font-size: 13px;
+    }
+
+    @media (max-width: $tabletSmall) {
+        font-size: 9px;
+    }
+}
+
+.title {
+    font-size: 15px;
+    font-weight: 700;
+    color: $textDark;
+    line-height: 141%;
+    padding: 0;
+    margin: 0;
+    margin-bottom: 16px;
+    @media (max-width: $tablet) {
+        font-size: 11px;
+        line-height: 133%;
+        margin-bottom: 8px;
+    }
+}
+
+.items {
+    display: flex;
+    flex-direction: column;
+    grid-gap: 8px;
+    padding: 0;
+    margin: 0;
+    margin-bottom: 16px;
+    list-style: none;
+    @media (max-width: $tablet) {
+        grid-gap: 4px;
+        margin-bottom: 12px;
+    }
+}
+.item {
+    display: flex;
+    justify-content: space-between;
+    p {
+        font-size: 13px;
+        line-height: 153%;
+        padding: 0;
+        margin: 0;
+    }
+    @media (max-width: $tablet) {
+        p {
+            font-size: 9px;
+        }
+    }
+}
+.span_1 {
+    font-weight: 400;
+}
+.span_2 {
+    font-weight: 700;
+}
+.modal_main {
+    padding: 0px;
+}
+.modal_content {
+    max-width: 920px;
+}

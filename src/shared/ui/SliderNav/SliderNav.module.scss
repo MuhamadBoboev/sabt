@@ -1,0 +1,65 @@
+@import 'src/@app/styles/variables';
+@import 'src/@app/styles/mixins';
+
+.Navigation {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: auto;
+  grid-gap: 16px;
+  @media (max-width: $tablet) {
+    justify-content: space-between;
+    width: 100%;
+  }
+}
+
+.Light {
+  .Prev,
+  .Next {
+    svg {
+      stroke: $black;
+    }
+
+    &:hover:disabled {
+      svg {
+        stroke: #fff;
+      }
+    }
+  }
+}
+
+.Prev,
+.Next {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 48px;
+  min-height: 48px;
+  background-color: $gray4;
+  border-radius: 50%;
+  overflow: hidden;
+  border: none;
+  cursor: pointer;
+
+  &:disabled {
+    cursor: not-allowed;
+  }
+
+  &:hover {
+    svg {
+      stroke: $primary;
+    }
+  }
+
+  &:hover:disabled {
+    svg {
+      stroke: $gray3;
+    }
+  }
+
+  svg {
+    transition: all 100ms;
+    fill: none;
+    stroke: none;
+  }
+}

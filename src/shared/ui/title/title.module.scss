@@ -1,0 +1,30 @@
+@import 'src/@app/styles/variables';
+@import 'src/@app/styles/mixins';
+
+
+.title {
+    font-size: 72px;
+    font-weight: 500;
+    line-height: 100%;
+    margin: 0 24px 0 0;
+    color: $newBlack;
+    // letter-spacing: -2px;
+    font-family: 'Formular', Arial, sans-serif;
+  
+    @media (max-width: $desktopSmall) {
+      font-size: 28px;
+      line-height: 32px;
+    }
+  
+    @media (max-width: $tablet) {
+      font-size: 32px;
+      line-height: 40px;
+      letter-spacing: 0px;
+    }
+  
+    // @media (max-width: $mobileLarge) {
+    //   font-size: 20px;
+    //   line-height: 24px;
+    // }
+  }
+  

@@ -1,0 +1,73 @@
+@import 'src/@app/styles/variables';
+@import 'src/@app/styles/mixins';
+
+.body {
+    display: flex;
+    width: 100%;
+    grid-gap: 24px;
+    @media (max-width: $desktop) {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    @media (max-width: $tablet) {
+        display: flex;
+        flex-direction: column;
+        grid-gap: 32px;
+    }
+}
+.radio {
+    flex: 0 1 240px;
+    @media (max-width: $tablet) {
+        flex: 0 1 auto;
+    }
+}
+.item_dropdown_1 {
+    flex: 0 1 240px;
+    @media (max-width: $tablet) {
+        flex: 0 1 auto;
+    }
+}
+.range {
+    @media (max-width: $tablet) {
+        flex: 0 1 auto;
+    }
+}
+.item_dropdown_2 {
+    flex: 0 1 200px;
+    @media (max-width: $tablet) {
+        flex: 0 1 auto;
+    }
+}
+.bl_button {
+    @media (max-width: $desktop) {
+        display: flex;
+        justify-content: center;
+        grid-column-start: 1;
+        grid-column-end: 3;        
+    }
+}
+.button {
+    @media (max-width: $desktop) {
+        display: flex;
+        justify-content: center;
+        grid-column-start: 1;
+        grid-column-end: 3;
+    }
+}
+.button {
+    @media (max-width: $tablet) {
+        width: 100% 
+    }
+}
+.title {
+    display: none;
+    padding: 0;
+    margin: 0;
+    font-size: 19px;
+    font-weight: 700;
+    margin-top: -22px;
+    @media (max-width: $tablet) {
+        display: inline-block;
+    }
+}

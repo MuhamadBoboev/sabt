@@ -1,0 +1,55 @@
+@import 'src/@app/styles/variables';
+@import 'src/@app/styles/mixins';
+
+.section {
+    padding-bottom: 48px;
+    border-bottom: 1px solid $gray2;
+    margin-bottom: 48px;
+
+    @media (max-width: $tablet) {
+        padding: 0;
+        border: none;
+        margin-bottom: 38px;
+    }
+}
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 48px;
+    @media (max-width: $tablet) {
+        margin-bottom: 38px;
+    }
+}
+.breadcrumbs {
+    margin-bottom: 40px;
+    @media (max-width: $tablet) {
+        margin-bottom: 26px;
+    }
+}
+.button {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    width: 44px;
+    height: 44px;
+    border-radius: 6px;
+    border: 1px solid $gray2;
+    background-color: transparent;
+    @media (max-width: $tablet) {
+        display: flex;
+    }
+}
+.title {
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 40px;
+    padding: 0;
+    margin: 0;
+    span {
+        color: $primary;
+    }
+    @media (max-width: $tablet) {
+        font-size: 20px;
+    }
+}

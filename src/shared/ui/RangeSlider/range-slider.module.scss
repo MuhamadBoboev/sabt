@@ -1,0 +1,59 @@
+@import 'src/@app/styles/variables';
+@import 'src/@app/styles/mixins';
+
+.rangeSlider {
+  position: relative;
+  width: calc(100% - 16px); /* Учитываем ширину ползунков */
+  margin-left: 8px; /* Центрируем ползунки относительно контейнера */
+  height: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.thumb {
+  position: absolute;
+  pointer-events: none;
+  width: calc(100% + 16px); /* Увеличиваем область для ползунков */
+  height: 10px;
+  -webkit-appearance: none;
+  appearance: none;
+  background: transparent;
+  margin-left: -8px; /* Центрирование ползунков */
+
+  &::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background: $green;
+    cursor: pointer;
+    pointer-events: auto;
+  }
+
+  &::-moz-range-thumb {
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background: $green;
+    cursor: pointer;
+    pointer-events: auto;
+  }
+}
+
+.track {
+  position: absolute;
+  background: $gray2;
+  height: 2px;
+  width: 100%;
+  z-index: 1;
+}
+
+.range {
+  position: absolute;
+  height: 2px;
+  background: $green;
+  z-index: 2;
+  left: 0;
+  right: 0;
+}

@@ -1,0 +1,99 @@
+@import 'src/@app/styles/variables';
+@import 'src/@app/styles/mixins';
+
+.List {
+	display: flex;
+	width: 100%;
+
+}
+
+
+.Item_main_slide {
+}
+
+.Item_main {
+	width: 100%;
+	position: relative;
+	border-radius: 12px;
+	overflow: hidden;
+
+	&::after {
+		content: '';
+		padding-bottom: 57.23%;
+		display: block;
+	}
+
+	@media (max-width: $tabletSmall) {
+		min-height: 200px;
+		max-height: 300px;
+	}
+
+	.Image {
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+
+		@media (max-width: $tabletSmall) {}
+	}
+}
+
+.mySwiper2 {
+	:global(.swiper-pagination-bullet) {
+		background-color: $primary;
+		opacity: 1;
+	}
+
+	:global(.swiper-pagination-bullet-active) {
+		background-color: white;
+	}
+
+	:global(.swiper-pagination) {
+		bottom: 30px !important;
+	}
+
+}
+
+.Item {
+	@media screen and (min-width: $tabletSmall) and (max-width: $desktop) {
+		min-height: 116px;
+	}
+
+	@media screen and (min-width: 0px) and (max-width: $tabletSmall) {
+		display: none;
+	}
+}
+
+.Image {
+	width: 100%;
+	object-fit: cover;
+}
+
+
+.bottom {
+    @media (max-width: $desktopSmall) {
+        margin-top: 24px;
+    }
+}
+
+.show_button {
+	z-index: 1;
+	position: absolute;
+	top: 16px;
+	right: 16px;
+	width: 36px;
+	height: 36px;
+	cursor: pointer;
+	border-radius: 50%;
+	overflow: hidden;
+	border: none;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: $gray4;
+
+}
