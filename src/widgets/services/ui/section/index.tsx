@@ -2,7 +2,7 @@ import { Section } from '@shared/ui/Section';
 import classes from './section.module.scss';
 import { ButtonMore } from '@shared/ui/ButtonMore';
 import useTranslation from 'next-translate/useTranslation';
-import { servicesData } from '@widgets/services/const/serviceData';
+import { forWhomData } from '@widgets/services/const/serviceData';
 import { Card } from '../card';
 import { useApplicationStore } from '@widgets/application/model/applicationStore';
 import { Button } from '@shared/ui/Button';
@@ -61,10 +61,10 @@ export const ServicesSection = () => {
         <Section 
             ref={sectionRef}
             className={classes.section}
-            name={'Услуги'}
+            name={'Для кого сервис?'}
         >
             <div className={classes.items}>
-                {servicesData.map((item, index) => (
+                {forWhomData.map((item, index) => (
                     <motion.div
                         key={item.id}
                         variants={cardVariants}
@@ -87,7 +87,7 @@ export const ServicesSection = () => {
                         buttonSize='large'
                         // onClick={toggle}
                     >
-                        <Link className={classes.link} href={'https://t.me/webrandTelegram'} target='_blank'>
+                        <Link className={classes.link} href={'https://t.me/sabttelegram'} target='_blank'>
                             Написать в TG
                         </Link>
                     </Button>

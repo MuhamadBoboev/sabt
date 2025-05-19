@@ -7,6 +7,7 @@ import { useState } from 'react'
 import Tabs from '@shared/ui/Tabs/Tabs'
 import Link from 'next/link'
 import { SectionTitle } from '@shared/ui'
+import { Section } from '@shared/ui/Section'
 
 export const ProjectsSection = () => {
     const size = useWindowSize();
@@ -14,7 +15,7 @@ export const ProjectsSection = () => {
 
     const [activeId, setActiveId] = useState<number| null>(0)
     
-    return <div className={classes.section}>
+    return <Section name className={classes.section}>
         {/* {ProjectsDate.map((item, index) => <div key={index}>
                 <div className={classes.item} >
                     <ProfileCard item={item} />
@@ -47,5 +48,5 @@ export const ProjectsSection = () => {
                     )}
                 </ul>
             </div>
-    </div>
+    </Section>
 }

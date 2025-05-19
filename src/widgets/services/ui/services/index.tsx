@@ -2,13 +2,13 @@ import { useRef, useState } from 'react';
 import { PageHeader } from '@shared/ui/PageHeader';
 import { Breadcrumbs } from '@shared/ui/Breadcrumbs';
 import { Button } from '@shared/ui/Button';
-import { servicesData } from '@widgets/services/const/serviceData';
 import { Form } from '../Form';
 import { motion } from 'framer-motion';
 import useTranslation from 'next-translate/useTranslation';
 import Head from 'next/head';
 import classes from './services.module.scss';
 import { ButtonMore } from '@shared/ui/ButtonMore';
+import { forWhomData } from '@widgets/services/const/serviceData';
 
 // SEO-компонент
 const SEO = () => (
@@ -49,7 +49,7 @@ export const Services = () => {
                 <nav aria-label={'servicesNavigation'} className={classes.servicesNav}>
                     <h2 className="visually-hidden">Список услуг</h2>
                     <ul className={classes.navItems}>
-                        {servicesData.map(({ id, name }) => (
+                        {forWhomData.map(({ id, name }) => (
                             <li key={id} className={classes.navItem}>
                                 <button
                                     onClick={() => scrollToSection(String(id))}
@@ -66,7 +66,7 @@ export const Services = () => {
                 <section className={classes.servicesContent}>
                     <h1 className={classes.servicesTitle}>{'Поехали!'}</h1>
                     <ul className={classes.servicesList}>
-                        {servicesData.map(({ id, name, description, services, link, linkText }) => (
+                        {forWhomData.map(({ id, name, description, services, link, linkText }) => (
                             <AnimatedItem key={id}>
                                 <li
                                     id={String(id)}

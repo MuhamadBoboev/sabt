@@ -49,7 +49,7 @@ export const AboutContent = () => {
                 </div>
             </div>
             <Button variant='contained'>
-                <Link className={classes.href} href={'https://t.me/webrandTelegram'} target='_blank'>
+                <Link className={classes.href} href={'https://t.me/sabttelegram'} target='_blank'>
                     Свяжитесь с нами
                 </Link>
             </Button>

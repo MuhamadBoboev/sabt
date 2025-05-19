@@ -8,8 +8,8 @@ export const contactsData = {
     link: 'address'
   },
   gmail: {
-    name: 'webrandtj@gmail.com',
-    link: 'webrandtj@gmail.com'
+    name: 'info@sabt.tj',
+    link: 'info@sabt.tj'
   },
 }
 

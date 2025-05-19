@@ -185,7 +185,7 @@ export const Price = () => {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
-          chat_id: -1002280291564,
+          chat_id: -1002691959947,
           parse_mode: 'HTML',
           text,
         }),

@@ -10,7 +10,7 @@ import { BarLoader } from "@shared/ui/loaders/BarLoader";
 import { Alert } from "@shared/ui/Alert";
 import { validatePhoneNumber } from "@shared/lib/validatePhoneNumber";
 import { TextArea } from "@shared/ui/TextArea";
-import { servicesData } from "@widgets/services/const/serviceData";
+import { forWhomData } from "@widgets/services/const/serviceData";
 
 interface FormData {
   name: string;
@@ -44,7 +44,7 @@ export const Form = () => {
     setSubmitStatus("pending");
 
     try {
-      let text = `<b>Заявка на сотрудничество c webrand.tj</b>\n\n`;
+      let text = `<b>Заявка на сотрудничество c sabt.tj</b>\n\n`;
       text += `<b>Имя:</b> ${data.name}\n`;
       text += `<b>Контакт:</b> ${data?.number}\n`;
       if (data.telegram) {
@@ -130,7 +130,7 @@ export const Form = () => {
         <select {...register("service")} className={classes.select} 
         //  defaultValue={servicesData.find((item) => item.id == serviceItem)?.name || servicesData[0]?.name}
          >
-          {servicesData.map((item) => (
+          {forWhomData.map((item) => (
             <option key={item.id} value={item.name}>
               {item.name}
             </option>

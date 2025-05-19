@@ -4,7 +4,7 @@ import clsx from 'clsx';
 import { Wrapper } from '@shared/ui/Wrapper';
 
 interface Props extends HTMLAttributes<HTMLElement> {
-  name: ReactNode;
+  name?: ReactNode;
   buttonMore?: ReactNode;
   breadcrumbs?: ReactNode;
   wrapperProps?: HTMLAttributes<HTMLDivElement>;

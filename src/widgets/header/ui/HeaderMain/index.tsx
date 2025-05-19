@@ -21,8 +21,8 @@ function HeaderMain() {
               <Image
                 src={`/assets/icons/logo.svg`}
                 alt="webrand"
-                width={200}
-                height={42}
+                width={100}
+                height={50}
                 priority
               />
             </Link>

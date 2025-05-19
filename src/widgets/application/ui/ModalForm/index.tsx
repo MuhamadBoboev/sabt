@@ -50,7 +50,7 @@ export const ModalForm = () => {
     setSubmitStatus('pending')
 
     try {
-      let text = `<b>Заявка c webrand.tj</b>\n\n`
+      let text = `<b>Заявка c sabt.tj</b>\n\n`
       text += `<b>Имя:</b> ${data.name}\n`
       text += `<b>Контакт:</b> ${data?.number}\n`
       text += `<b>Почта:</b> ${data?.gmail}\n`
@@ -65,7 +65,7 @@ export const ModalForm = () => {
               'Content-Type': 'application/json',
             },
             body: JSON.stringify({
-              chat_id: -1002280291564,
+              chat_id: -1002691959947,
               parse_mode: 'HTML',
               text: text,
             }),

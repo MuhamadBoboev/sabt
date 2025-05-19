@@ -22,9 +22,16 @@
 
 .bl_text {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .text {
     color: $gray2;
 }
+
+.link {
+    text-decoration: none;
+    color: #2a62d3;
+}
+
