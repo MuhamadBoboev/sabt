@@ -15,6 +15,8 @@ import { useApplicationStore } from '@widgets/application/model/applicationStore
 import { contactsData } from '@shared/const/contacts'
 
 
+interface Props {}
+
 function Navigation() {
   const pathname = usePathname()
   const { isOpen, close } = useMenuStore(({ isOpen, close }) => ({
@@ -24,7 +26,7 @@ function Navigation() {
   const { toggle } = useApplicationStore(state => (state))
   const { t } = useTranslation()
 
-  useLockBodyScroll(isOpen);
+  // useLockBodyScroll(isOpen);
   return (
     <nav className={clsx(classes.nav, pathname === '/' && classes.mainPage)}>
       <div className={clsx(classes.menu, isOpen && classes.open)}>

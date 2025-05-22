@@ -173,7 +173,7 @@ export const Sabt = () => {
 
     return <>
         <>
-        <Section className={classes.section} name='SABT — умное бронирование услуг в Таджикистане' wrapperProps={{ className: classes.wrapper }}>
+        <Section className={classes.section} name='SABT — онлайн запись в 3 клика!' wrapperProps={{ className: classes.wrapper }}>
             <div className={classes.section_body}>
                 <p className={classes.subtitle}>
                     SABT — это платформа, которая позволяет пользователям легко и удобно записываться на услуги в различных сферах, таких как медицина, красота, фитнес и другие. Мы стремимся сделать процесс записи максимально простым и доступным для всех.

@@ -27,7 +27,7 @@ function HeaderMain() {
                   priority
                 />
               </Link>
-              <div className={classes.nav_mobile}>
+              <div >
                 <Navigation />
               </div>
             </div>
@@ -37,9 +37,7 @@ function HeaderMain() {
       </div>
       <div className={classes.overlay}>
       </div>
-      <div className={classes.nav}>
-        <Navigation />
-      </div>
+      <Navigation />
     </div>
   )
 }
