@@ -56,27 +56,52 @@ const whyData = [
   {
     title: 'Онлайн-доступ 24/7',
     text: 'Записывайтесь на услуги в любое время суток — без звонков и очередей. Удобство всегда под рукой.',
-    image: '/assets/images/why-1.jpg',
+    image: '/assets/images/why/why-1.png',
   },
   {
     title: 'Быстрая запись без ожидания',
     text: 'Выбирайте мастеров и свободные слоты — никаких согласований по телефону. Запись занимает меньше минуты.',
-    image: '/assets/images/why-2.jpg',
+    image: '/assets/images/why/why-2.png',
   },
   {
     title: 'Отзывы и рейтинг специалистов',
     text: 'Читайте реальные отзывы других клиентов и выбирайте лучших по рейтингу и опыту.',
-    image: '/assets/images/why-3.jpg',
+    image: '/assets/images/why/why-3.png',
   },
   {
     title: 'Напоминания и уведомления',
     text: 'Автоматические напоминания помогут не забыть о визите. Уведомления приходят прямо на телефон.',
-    image: '/assets/images/why-4.jpg',
+    image: '/assets/images/why/why-4.png',
   },
   {
     title: 'История записей в одном месте',
     text: 'Сохраняйте любимых специалистов, просматривайте прошлые визиты и повторяйте запись в один клик.',
-    image: '/assets/images/why-5.jpg',
+    image: '/assets/images/why/why-5.png',
+  },
+  {
+    title: 'Управление расписанием онлайн',
+    text: 'Мастера сами настраивают рабочие часы, выходные и перерывы — всё в одном приложении.',
+    image: '/assets/images/why/why-6.png',
+  },
+  {
+    title: 'Меньше пропущенных клиентов',
+    text: 'Система автоматически напоминает клиенту о визите, снижая число забытых или отменённых записей.',
+    image: '/assets/images/why/why-7.png',
+  },
+  {
+    title: 'Формирование клиентской базы',
+    text: 'Платформа сохраняет всех клиентов и записи, что помогает строить лояльную аудиторию.',
+    image: '/assets/images/why/why-8.png',
+  },
+  {
+    title: 'Рост за счёт отзывов и рейтинга',
+    text: 'Положительные отзывы и высокая оценка помогают привлечь новых клиентов и продвигаться в выдаче.',
+    image: '/assets/images/why/why-9.png',
+  },
+  {
+    title: 'Упрощение работы администратора',
+    text: 'Запись, напоминания и база клиентов автоматизированы — администратор работает быстрее и эффективнее.',
+    image: '/assets/images/why/why-10.png',
   }
 ];
 
@@ -84,47 +109,47 @@ const forWhomData = [
   {
     title: 'Салоны красоты и парикмахерские',
     text: 'Онлайн-запись на стрижки, укладки, окрашивания и уход за волосами. Упрощённое управление расписанием и клиентами.',
-    image: '/assets/images/salon.jpg',
+    image: '/assets/images/for-whom/for-whom-1.png',
   },
   {
     title: 'Маникюрные и педикюрные студии',
     text: 'Автоматизация записи на ногтевой сервис. Напоминания клиентам, учёт мастеров и свободных слотов.',
-    image: '/assets/images/nails.jpg',
+    image: '/assets/images/for-whom/for-whom-2.png',
   },
   {
     title: 'Массажные кабинеты и SPA-салоны',
     text: 'Гибкое расписание для массажистов и специалистов, приём записей 24/7 и рост постоянных клиентов.',
-    image: '/assets/images/massage.jpg',
+    image: '/assets/images/for-whom/for-whom-3.png',
   },
   {
     title: 'Медицинские центры и стоматологии',
     text: 'Запись к врачам, учёт пациентов, интеграция с расписанием приёма и статистика по загруженности.',
-    image: '/assets/images/clinic.jpg',
+    image: '/assets/images/for-whom/for-whom-4.png',
   },
   {
     title: 'Фитнес-тренеры и спортивные секции',
     text: 'Платформа для записи на индивидуальные тренировки, групповые занятия и занятия по расписанию.',
-    image: '/assets/images/fitness.jpg',
+    image: '/assets/images/for-whom/for-whom-5.png',
   },
   {
     title: 'Автосервисы и шиномонтаж',
     text: 'Онлайн-запись на ремонт, замену шин, диагностику. Удобное управление загрузкой боксов и мастеров.',
-    image: '/assets/images/autoservice.jpg',
+    image: '/assets/images/for-whom/for-whom-6.png',
   },
   {
     title: 'Фотостудии и видеосъёмка',
     text: 'Бронирование съёмок, студий и оборудования через систему онлайн-записи.',
-    image: '/assets/images/photo.jpg',
+    image: '/assets/images/for-whom/for-whom-7.png',
   },
   {
     title: 'Репетиторы и образовательные курсы',
     text: 'Удобный приём заявок, управление расписанием занятий и уведомления ученикам.',
-    image: '/assets/images/education.jpg',
+    image: '/assets/images/for-whom/for-whom-8.png',
   },
   {
     title: 'Мастера на выезд (ремонт, уборка и т.д.)',
     text: 'Организация заявок по времени и району, возможность указания специализации и цен.',
-    image: '/assets/images/repair.jpg',
+    image: '/assets/images/for-whom/for-whom-9.png',
   }
 ];
 
@@ -174,7 +199,7 @@ export const Sabt = () => {
                 {forWhomData.map((item, index) => (
                     <div key={index} className={classes.service_item}>
                         <div className={classes.item_icon}>
-                            <Image src={'/assets/images/banner-mobile-1.jpg'} alt='image' width={100} height={100} />
+                            <Image src={item.image} alt={item.title} width={100} height={100} />
                         </div>
                         <div className={classes.item_text}>
                             <h3 className={classes.item_title}>{item.title}</h3>
@@ -277,7 +302,7 @@ export const Sabt = () => {
                     {whyData.map((item, index) => (
                         <div key={index} className={classes.service_item}>
                             <div className={classes.item_icon}>
-                                <Image src={'/assets/images/banner-mobile-1.jpg'} alt='image' width={100} height={100} />
+                                <Image src={item.image} alt={item.title} width={100} height={100} />
                             </div>
                             <div className={classes.item_text}>
                                 <h3 className={classes.item_title}>{item.title}</h3>

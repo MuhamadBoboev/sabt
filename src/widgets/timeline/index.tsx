@@ -56,6 +56,7 @@ const Timeline = () => {
           {timelineData.map((item, index) => (
             <div key={index} className={clsx(classes.card, index % 2 === 0 ? classes.even : classes.odd)}>
               <div className={classes.info}>
+                <p>Этап {1+index}</p>
                 <h3 className={classes.title}>{item.title}</h3>
                 <p className={classes.timeline_text}>{item.text}</p>
                 <div className={classes.image}>
