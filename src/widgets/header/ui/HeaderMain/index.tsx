@@ -37,7 +37,9 @@ function HeaderMain() {
       </div>
       <div className={classes.overlay}>
       </div>
-      <Navigation />
+      <div className={classes.nav}>
+        <Navigation />
+      </div>
     </div>
   )
 }
