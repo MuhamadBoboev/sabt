@@ -27,11 +27,20 @@
 }
 
 .text {
-    color: $gray2;
+    color: $gray3;
+}
+
+.developer {
+    text-transform: uppercase;
 }
 
 .link {
+    font-weight: 700;
     text-decoration: none;
     color: #2a62d3;
+
+    span {
+        color: black;
+    }
 }
 

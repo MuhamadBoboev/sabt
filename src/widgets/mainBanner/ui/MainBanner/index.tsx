@@ -22,7 +22,7 @@ export const MainBanner = () => {
 
     return <div className={classes.main_banner}>
         	<h1 className={classes.title}>
-                We Brand – это динамичная и инновационная компания
+                Sabt – это онлайн-запись для вашего бизнеса
             </h1>
             <Wrapper>
                 <div className={classes.banner} >
@@ -56,7 +56,7 @@ export const MainBanner = () => {
                                         <Image
                                             className={classes.img} 
                                             src={item.img}
-                                            width={1390}
+                                            width={1300}
                                             height={620}
                                             alt={'banner'}
                                             />
@@ -176,6 +176,6 @@ export const MainBanner = () => {
                     </div>} */}
                 </div>
             {/* <UnderBanner /> */}
-        </Wrapper>
+            </Wrapper>
     </div>
 }

@@ -3,37 +3,46 @@ import classes from './timeline.module.scss';
 import { Section } from '@shared/ui/Section';
 import Image from 'next/image';
 
-
 const timelineData = [
   {
-    title: 'Клиент узнаёт о нас',
-    text: 'Потенциальный клиент видит нашу рекламу или находит нас через поиск. Это может быть Instagram, Google или рекомендации.',
-    image: '/assets/images/banner-mobile-1.jpg',
+    title: '1. Салон подключается к SABT',
+    text: 'Бизнес регистрируется на платформе, добавляет информацию о себе, специалистах, услугах и графике работы.',
+    image: '/assets/images/stages/stage_1.png',
   },
   {
-    title: 'Клиент заходит на сайт',
-    text: 'Переходит на сайт, чтобы узнать подробности о наших услугах, портфолио, условиях работы и ценах.',
-    image: '/assets/images/banner-mobile-1.jpg',
+    title: '2. Размещение ссылки',
+    text: 'Салон размещает ссылку на онлайн-запись в Instagram, WhatsApp, на сайте или других соцсетях.',
+    image: '/assets/images/stages/stage_2.png',
   },
   {
-    title: 'Оставляет заявку',
-    text: 'Через форму обратной связи или мессенджер клиент оставляет свои контактные данные и кратко описывает задачу.',
-    image: '/assets/images/banner-mobile-1.jpg',
+    title: '3. Клиент переходит по ссылке',
+    text: 'Потенциальный клиент нажимает на ссылку и попадает на страницу онлайн-записи конкретного салона.',
+    image: '/assets/images/stages/stage_3.png',
   },
   {
-    title: 'Связь с менеджером',
-    text: 'Наш менеджер связывается с клиентом, уточняет детали, отправляет бриф (при необходимости) и отвечает на все вопросы.',
-    image: '/assets/images/banner-mobile-1.jpg',
+    title: '4. Выбор услуги',
+    text: 'Клиент выбирает нужную категорию и конкретную услугу из списка, представленного салоном.',
+    image: '/assets/images/stages/stage_4.png',
   },
   {
-    title: 'Обсуждение и согласование',
-    text: 'Мы уточняем требования, предлагаем решение, рассчитываем стоимость и сроки. После согласования подписываем договор или выставляем счёт.',
-    image: '/assets/images/banner-mobile-1.jpg',
+    title: '5. Выбор специалиста',
+    text: 'Клиент видит всех доступных мастеров и может выбрать специалиста по рейтингу, опыту или свободному времени.',
+    image: '/assets/images/stages/stage_5.png',
   },
   {
-    title: 'Начало работы',
-    text: 'Команда приступает к выполнению проекта. В процессе клиент получает отчёты и может следить за этапами выполнения.',
-    image: '/assets/images/banner-mobile-1.jpg',
+    title: '6. Выбор даты и времени',
+    text: 'Открывается календарь с доступными слотами. Клиент выбирает удобное время.',
+    image: '/assets/images/stages/stage_6.png',
+  },
+  {
+    title: '7. Ввод контактных данных',
+    text: 'Клиент вводит своё имя и номер телефона для подтверждения записи.',
+    image: '/assets/images/stages/stage_7.png',
+  },
+  {
+    title: '8. Подтверждение записи',
+    text: 'После ввода данных клиент получает подтверждение записи по SMS или на экране. Салон видит запись в своём расписании.',
+    image: '/assets/images/stages/stage_8.png',
   },
 ];
 
@@ -51,10 +60,10 @@ const Timeline = () => {
                 <p className={classes.timeline_text}>{item.text}</p>
                 <div className={classes.image}>
                   <Image 
-                    src={'/assets/images/banner-mobile-1.jpg'} 
+                    src={item.image} 
                     alt='image' 
-                    width={100}
-                    height={100}
+                    width={500}
+                    height={500}
                     />
                 </div>
               </div>

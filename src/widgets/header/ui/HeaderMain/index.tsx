@@ -11,26 +11,35 @@ function HeaderMain() {
 
   const { t } = useTranslation('common')
   return (
-    <div className={classes.mainPage}>
-      <Wrapper className={classes.wrapper}>
-        <div className={classes.block}>
-          <div className={classes.header_left} >
-            <Link href={"/"}
-              className={classes.logo}
-            >
-              <Image
-                src={`/assets/icons/logo.svg`}
-                alt="webrand"
-                width={100}
-                height={50}
-                priority
-              />
-            </Link>
-            <Navigation />
+    <div>
+      <div className={classes.mainPage}>
+        <Wrapper className={classes.wrapper}>
+          <div className={classes.block}>
+            <div className={classes.header_left} >
+              <Link href={"/"}
+                className={classes.logo}
+              >
+                <Image
+                  src={`/assets/icons/logo.svg`}
+                  alt="webrand"
+                  width={100}
+                  height={50}
+                  priority
+                />
+              </Link>
+              <div className={classes.nav_mobile}>
+                <Navigation />
+              </div>
+            </div>
+            <Contacts />
           </div>
-          <Contacts />
-        </div>
-      </Wrapper>
+        </Wrapper>
+      </div>
+      <div className={classes.overlay}>
+      </div>
+      <div className={classes.nav}>
+        <Navigation />
+      </div>
     </div>
   )
 }

@@ -5,7 +5,7 @@ import { HTMLAttributes } from 'react'
 
 interface Props extends HTMLAttributes<HTMLLIElement> {
   name: string
-  image: string
+  image?: string
   link: string
 }
 
@@ -22,13 +22,13 @@ function Card({name, link, image, children, ...props}: Props) {
       >
         <article className={classes.card}>
           <div className={classes.body}>
-            <Image
+            {/* <Image
               className={classes.img}
               src={image}
               alt={name}
               width={500}
               height={350}
-            />
+            /> */}
           </div>
           <div className={classes.content}>
             {children}

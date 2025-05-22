@@ -1,60 +1,19 @@
 import { IContact } from "../model/Contacts";
 
-export const contactData: IContact[] = [
-    {
-        id: 1,
-        name: 'ЖК Живи и Радуйся', 
-        image: '/assets/images/news_1.png', 
-        address: 'Испечак 14', 
-        phone: '+992 900 000 00 00' 
-    },
-    {
-        id: 2,
-        name: 'ЖК Живи и Радуйся', 
-        image: '/assets/images/news_1.png', 
-        address: 'Испечак 14', 
-        phone: '+992 900 000 00 00' 
-    },
-    {
-        id: 3,
-        name: 'ЖК Живи и Радуйся', 
-        image: '/assets/images/news_1.png', 
-        address: 'Испечак 14', 
-        phone: '+992 900 000 00 00' 
-    },
-    {
-        id: 4,
-        name: 'ЖК Живи и Радуйся', 
-        image: '/assets/images/news_1.png', 
-        address: 'Испечак 14', 
-        phone: '+992 900 000 00 00' 
-    },
-    {
-        id: 5,
-        name: 'ЖК Живи и Радуйся', 
-        image: '/assets/images/news_1.png', 
-        address: 'Испечак 14', 
-        phone: '+992 900 000 00 00' 
-    },
-    {
-        id: 6,
-        name: 'ЖК Живи и Радуйся', 
-        image: '/assets/images/news_1.png', 
-        address: 'Испечак 14', 
-        phone: '+992 900 000 00 00' 
-    },
-    {
-        id: 7,
-        name: 'ЖК Живи и Радуйся', 
-        image: '/assets/images/news_1.png', 
-        address: 'Испечак 14', 
-        phone: '+992 900 000 00 00' 
-    },
-    {
-        id: 8,
-        name: 'ЖК Живи и Радуйся', 
-        image: '/assets/images/news_1.png', 
-        address: 'Испечак 14', 
-        phone: '+992 900 000 00 00' 
-    },
+export const contactsDataArray: IContact[] = [
+  {
+    name: '+992 988 64 55 43',
+    link: '+992988645543',
+    image: 'https://example.com/image1.jpg'
+  },
+  {
+    name: 'address',
+    link: 'address',
+    image: 'https://example.com/image1.jpg'
+  },
+  {
+    name: 'asdas',
+    link: 'sadasdasdasd',
+    image: 'https://example.com/image1.jpg'
+  }
 ]

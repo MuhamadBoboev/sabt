@@ -16,14 +16,15 @@ export const FooterMain = () => {
                     <p className={classes.text} >
                         © 2025 «Сабт.тч»
                     </p>
-                    <div>
-                        Разработано в&nbsp;
+                    <div className={classes.developer} >
+                        Product by&nbsp;
                         <Link 
                             className={classes.link} 
                             href={'https://webrand.tj/'}
                             target='_blank'
                             >
-                            WeBrand
+                            We
+                            <span>Brand</span>
                         </Link>
                     </div>
                 </div>

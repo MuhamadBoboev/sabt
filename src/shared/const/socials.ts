@@ -11,7 +11,7 @@ export const socialsData: Social[] = [
     // },
     {
         name: 'Telegram',
-        link: 'https://t.me/sabttelegram',
+        link: 'https://t.me/onlinesabt',
         image: '/assets/icons/telegram.svg',
     },
     // {

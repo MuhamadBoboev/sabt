@@ -3,6 +3,28 @@
 
 .mainPage {
   width: 100%;
+
+   @media (max-width: $tablet) {
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    width: 100%;
+    z-index: 10;
+    background-color: rgba(255, 255, 255, 0.5); // полупрозрачный белый фон
+    backdrop-filter: blur(24px);
+    -webkit-backdrop-filter: blur(24px); // для Safari
+    // border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  }
+}
+
+.overlay {
+  display: none;
+
+  @media (max-width: $tablet) {
+    display: block;
+    height: 63px;    
+  }
 }
 
 .block {
@@ -30,8 +52,8 @@
 
   img {
     @media (max-width: 920px) {
-      width: 120px;
-      height: 28px;
+      width: 80px;
+      height: 27px;
     }
   }
 }
@@ -39,4 +61,21 @@
 .header_left {
   display: flex;
   align-items: center;
+}
+
+
+.nav {
+  display: none;
+
+  @media (max-width: $tablet) {
+    display: flex;
+  }
+}
+
+.nav_mobile {
+  display: flex;
+
+  @media (max-width: $tablet) {
+    display: none;
+  }
 }

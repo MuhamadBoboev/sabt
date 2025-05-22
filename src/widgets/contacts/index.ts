@@ -1,5 +1,5 @@
 
-import { ContactsPage } from "./ui/ContactsPage/indx";
+import { ContactsPage } from "./ui/ContactsPage";
 
 
 export { ContactsPage }

@@ -2,21 +2,19 @@ import { Section } from '@shared/ui/Section'
 import classes from './contacts-page.module.scss'
 import { Breadcrumbs } from '@shared/ui/Breadcrumbs'
 import { ContactCard } from '../ContactCard/indx'
-import { contactData } from '@widgets/contacts/const/contactsData'
+// import { contactData } from '@widgets/contacts/const/contactsData'
 import { IProjectCard } from '@widgets/projects/model/IProjectCard'
 import useTranslation from 'next-translate/useTranslation'
+import { contactsData } from '@shared/const/contacts'
+import { contactsDataArray } from '@widgets/contacts/const/contactsData'
 
-interface Props {
-    residences?: IProjectCard[]
-}
-export const ContactsPage = ({residences}: Props) => {
+// interface Props {
+//     residences?: IProjectCard[]
+// }
+export const ContactsPage = () => {
 
     const { t } = useTranslation('common')
 
-    if(!residences) {
-        return null
-    }
-    
     return <Section 
         name={t('contacts')}
         breadcrumbs={ <Breadcrumbs
@@ -26,11 +24,14 @@ export const ContactsPage = ({residences}: Props) => {
             />}
         >
     <ul className={classes.items}>
-        {residences.map((contact) => 
+        {contactsDataArray.map((contact, index) => 
         <ContactCard 
-            key={contact.id} 
-            contact={contact} 
-            />)}
+            key={index} 
+            name={contact.name}
+            link={contact.link}
+            image={contact.image}
+            />
+        )}
     </ul>
 </Section>
 }
