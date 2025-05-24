@@ -9,12 +9,14 @@ import { Button } from "@shared/ui/Button";
 import { BarLoader } from "@shared/ui/loaders/BarLoader";
 import { Alert } from "@shared/ui/Alert";
 import { validatePhoneNumber } from "@shared/lib/validatePhoneNumber";
+import { TextArea } from "@shared/ui/TextArea";
+import { SectionTitle } from "@shared/ui";
 
 interface FormData {
   name: string
   number: string
   gmail: string
-  position?: string
+  question: string
 }
 
 export const Form = () => {
@@ -31,7 +33,7 @@ export const Form = () => {
   })
   useEffect(() => {
     setErrorMessage('')
-  }, [watch('number'), watch('name'), watch('gmail'), watch('position')])
+  }, [watch('number'), watch('name'), watch('gmail'), watch('question')])
   const { t } = useTranslation('common')
 
   const onSubmit: SubmitHandler<FormData> = async (data) => {
@@ -39,11 +41,11 @@ export const Form = () => {
     setSubmitStatus('pending')
 
     try {
-      let text = `<b>Заявка на вакансию c sabt.tj</b>\n\n`
+      let text = `<b>Вопрос c sabt.tj</b>\n\n`
       text += `<b>Имя:</b> ${data.name}\n`
       text += `<b>Контакт:</b> ${data?.number}\n`
       text += `<b>Почта:</b> ${data?.gmail}\n`
-      text += `<b>Должность:</b> ${data?.position}\n`
+      text += `<b>Вопрос:</b> ${data?.question}\n`
 
       try {
         const responseTelegram = await fetch(
@@ -73,7 +75,7 @@ export const Form = () => {
       name: '',
       number: '+992',
       gmail: '',
-      position: '',
+      question: ''
     })
 
     setSubmitStatus('fulfilled')
@@ -81,7 +83,7 @@ export const Form = () => {
 
   return (
     <form className={classes.form} onSubmit={handleSubmit(onSubmit)} id="form" >
-      <h2>Оставить заявку</h2>
+      <h2 className={classes.title}>Задать вопрос</h2>
       {!!errorMessage && <Alert type="danger">{errorMessage}</Alert>}
       <div className={classes.items}>
         <div className={classes.item}>
@@ -97,12 +99,12 @@ export const Form = () => {
         </div>
         <div className={classes.item}>
           <Input
-            label={t('input_surname')}
+            label={t('Почта или телеграм')}
             groupProps={{ className: classes.inputGroup }}
             {...register('gmail', {
-              required: 'Example@gmail.com?',
+              required: 'Почта или телеграм?',
             })}
-            placeholder={t('input_surname')}
+            placeholder={t('Почта или телеграм')}
             errorMessage={errors.gmail?.message}
           />
         </div>
@@ -121,23 +123,22 @@ export const Form = () => {
         </div>
         <div className={classes.item}>
           {/* <label className={classes.label}>Позиция</label> */}
-          <select
-            {...register('position')}
-            className={classes.select}
-          >
-            <option value="">Не выбрать</option>
-            {/* <option value="Frontend Developer">{t('frontend_dev')}</option> */}
-            <option value="Designer">{t('Дизайнер')}</option>
-            {/* <option value="SMM Specialist">{t('СММ-специалист')}</option> */}
-          </select>
-          {errors.position && <p className={classes.error}>{errors.position.message}</p>}
+          <TextArea
+            className={classes.textArea}
+            label={'Вопрос'}
+            groupProps={{ className: classes.inputGroup }}
+            {...register('question')}
+            placeholder={t('question')}
+            errorMessage={errors.question?.message}
+          />
+          {errors.question && <p className={classes.error}>{errors.question.message}</p>}
         </div>
       </div>
-      <div className={classes.bl_buttons}>
+      {/* <div className={classes.bl_buttons}> */}
         <Button
           type="submit"
           fullWidth
-          buttonSize="large"
+          // buttonSize="large"
           className={classes.button_send}
           onClick={(event) => {
             if (submitStatus === 'pending') {
@@ -150,7 +151,7 @@ export const Form = () => {
           )}
           {submitStatus !== 'pending' && <span>{t('send')}</span>}
         </Button>
-      </div>
+      {/* </div> */}
     </form>
   )
 }

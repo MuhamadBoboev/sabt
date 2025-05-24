@@ -1,5 +1,5 @@
 export interface IContact {
     name: string 
-    image: string 
+    image?: string 
     link: string 
 }

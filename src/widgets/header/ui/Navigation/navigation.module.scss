@@ -205,6 +205,13 @@
 }
 .logo {
   margin-top: 8px;
+
+  img {
+    @media (max-width: $tablet) {
+      width: 45px;
+      
+    }
+  }
 }
 .logo_bl {
   display: none;

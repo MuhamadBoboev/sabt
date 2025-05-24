@@ -3,9 +3,9 @@ import Head from "next/head";
 import { MainBanner } from "@widgets/mainBanner";
 import { PhotoGallery } from "@widgets/photoGallery";
 import { ServicesSection } from "@widgets/services";
-import { AboutContent } from "@widgets/about/ui/AboutContent";
+import { AboutContent } from "@widgets/price/ui/PriceContent";
 import { SolutionsSection } from "@widgets/solutions";
-import { Team } from "@widgets/about/ui/Team";
+import { Team } from "@widgets/price/ui/Team";
 import { ProjectsSection } from "@widgets/projects";
 import { Sabt } from "@widgets/sabt";
 

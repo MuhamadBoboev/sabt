@@ -1,7 +1,25 @@
 @import 'src/@app/styles/variables';
 @import 'src/@app/styles/mixins';
 
+.item {
+    text-decoration: none;
+    background: #fff;
+	box-shadow: 0 2.5625px 5.125px rgba(66, 71, 76, 0.05),
+		0 2.5625px 25.625px #eee;
+	border-radius: 12px;
+    cursor: pointer;
+
+    &:hover {
+        transform: scale(1.05);
+        transition: all 0.3s ease-in-out;
+    }
+}
+
 .content {
+    display: flex;
+    justify-content: center;
+    grid-gap: 8px;
+    align-items: center;
     padding: 20px;
 }
 .title {
@@ -15,7 +33,7 @@
     @include lineclamp(1);
 
     @media (max-width: $tablet) {
-        font-size: 20px;
+        font-size: 16px;
         font-weight: 700;
         line-height: 120%;
     }
@@ -45,5 +63,13 @@
 
     @media (max-width: $tablet) {
         // background-color: red;
+    }
+}
+
+.icon {
+    color: $newBlack;;
+    svg {
+        // stroke: $primary;
+        // fill: #0000ee;
     }
 }

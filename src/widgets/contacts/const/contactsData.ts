@@ -3,17 +3,27 @@ import { IContact } from "../model/Contacts";
 export const contactsDataArray: IContact[] = [
   {
     name: '+992 988 64 55 43',
-    link: '+992988645543',
-    image: 'https://example.com/image1.jpg'
+    link: 'tel:+992988645543',
+    image: '/assets/icons/phone_2.svg'
   },
   {
-    name: 'address',
-    link: 'address',
-    image: 'https://example.com/image1.jpg'
+    name: 'Telegram',
+    link: 'https://t.me/sabttelegram',
+    image: '/assets/icons/telegram.svg'
   },
   {
-    name: 'asdas',
-    link: 'sadasdasdasd',
-    image: 'https://example.com/image1.jpg'
-  }
+    name: 'Whatsapp',
+    link: 'https://wa.me/992988645543',
+    image: '/assets/icons/whatsapp.svg'
+  },
+  {
+    name: 'Instagram',
+    link: 'https://www.instagram.com/sabt.online.tj',
+    image: '/assets/icons/instagram.svg'
+  },
+    {
+    name: 'Telegram канал',
+    link: 'https://t.me/onlinesabt',
+    image: '/assets/icons/telegram.svg'
+  },
 ]

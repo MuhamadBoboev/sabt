@@ -1,5 +1,5 @@
 import classes from './about.module.scss'
-import { AboutContent } from '../AboutContent'
+import { AboutContent } from '../PriceContent'
 import useTranslation from 'next-translate/useTranslation'
 import { SolutionsSection } from '@widgets/solutions'
 import { Team } from '../Team'
@@ -10,7 +10,7 @@ import Timeline from '@widgets/timeline'
 import { Breadcrumbs } from '@shared/ui/Breadcrumbs'
 
 
-export const About = () => {
+export const Price = () => {
     const { t } = useTranslation('aboutCompany')
 
     const { ref, inView } = useInView({
@@ -53,12 +53,12 @@ export const About = () => {
                 variants={titleVariants}
             >
                 <h1 className={classes.title}>
-                    <span>WE</span>BRAND
+                    <span>SABT</span>.tj
                 </h1>
                 <Breadcrumbs
                     className={classes.breadcrumbs}
                     items={[
-                        {label: 'О компании', isActive: true}
+                        {label: 'Цены и тарифы', isActive: true}
                     ]}
                     includeHome
                 /> 
@@ -70,14 +70,14 @@ export const About = () => {
                 variants={textVariants}
             >
                 <h1 className={classes.info_text}>
-                    Мы – sabt.tj, онлайн-запись в два клика.
+                    Мы – sabt.tj, онлайн-запись в три клика.
                 </h1>
             </motion.div>
         </div>
     </Wrapper>
-    <Team />
+    {/* <Team />
     <SolutionsSection />
-    <Timeline />
+    <Timeline /> */}
     <AboutContent />
     {/* <Gallery
         className={classes.gallery}

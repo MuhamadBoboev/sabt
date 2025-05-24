@@ -14,11 +14,11 @@ export const socialsData: Social[] = [
         link: 'https://t.me/onlinesabt',
         image: '/assets/icons/telegram.svg',
     },
-    // {
-    //     name: 'WhatsApp',
-    //     link: 'https://wa.me/992988645543',
-    //     image: '/assets/icons/whatsapp.svg',
-    // },
+    {
+        name: 'WhatsApp',
+        link: 'https://wa.me/992988645543',
+        image: '/assets/icons/whatsapp.svg',
+    },
     // {
     //     name: 'facebook',
     //     link: 'https://www.facebook.com/profile.php?id=61567095129939',

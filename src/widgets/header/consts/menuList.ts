@@ -1,10 +1,13 @@
 export const menuList = [
-    { href: '/about', name: 'О продукте' },
+    { href: '/price', name: 'Цены' },
     { href: '/services', name: 'Услуги' },
-    { href: '/portfolio', name: 'Партнёрам' },
+    // { href: '/portfolio', name: 'Партнёрам' },
     { href: '/faq', name: 'FAQ' },
     { href: '/contacts', name: 'Контакты' },
-    { href: '/news', name: 'Новости ' },
+    // { href: '/news', name: 'Новости ' },
+
+
+
   // { href: '/news', name: 'news' },
   // { href: '/about', name: 'О компании' },
   // { href: '/services', name: 'Наши услуги' },

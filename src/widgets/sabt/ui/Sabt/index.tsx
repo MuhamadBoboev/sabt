@@ -63,11 +63,11 @@ const whyData = [
     text: 'Выбирайте мастеров и свободные слоты — никаких согласований по телефону. Запись занимает меньше минуты.',
     image: '/assets/images/why/why-2.png',
   },
-  {
-    title: 'Отзывы и рейтинг специалистов',
-    text: 'Читайте реальные отзывы других клиентов и выбирайте лучших по рейтингу и опыту.',
-    image: '/assets/images/why/why-3.png',
-  },
+//   {
+//     title: 'Отзывы и рейтинг специалистов',
+//     text: 'Читайте реальные отзывы других клиентов и выбирайте лучших по рейтингу и опыту.',
+//     image: '/assets/images/why/why-3.png',
+//   },
   {
     title: 'Напоминания и уведомления',
     text: 'Автоматические напоминания помогут не забыть о визите. Уведомления приходят прямо на телефон.',
@@ -93,11 +93,11 @@ const whyData = [
     text: 'Платформа сохраняет всех клиентов и записи, что помогает строить лояльную аудиторию.',
     image: '/assets/images/why/why-8.png',
   },
-  {
-    title: 'Рост за счёт отзывов и рейтинга',
-    text: 'Положительные отзывы и высокая оценка помогают привлечь новых клиентов и продвигаться в выдаче.',
-    image: '/assets/images/why/why-9.png',
-  },
+//   {
+//     title: 'Рост за счёт отзывов и рейтинга',
+//     text: 'Положительные отзывы и высокая оценка помогают привлечь новых клиентов и продвигаться в выдаче.',
+//     image: '/assets/images/why/why-9.png',
+//   },
   {
     title: 'Упрощение работы администратора',
     text: 'Запись, напоминания и база клиентов автоматизированы — администратор работает быстрее и эффективнее.',
@@ -131,26 +131,26 @@ const forWhomData = [
     text: 'Платформа для записи на индивидуальные тренировки, групповые занятия и занятия по расписанию.',
     image: '/assets/images/for-whom/for-whom-5.png',
   },
-  {
-    title: 'Автосервисы и шиномонтаж',
-    text: 'Онлайн-запись на ремонт, замену шин, диагностику. Удобное управление загрузкой боксов и мастеров.',
-    image: '/assets/images/for-whom/for-whom-6.png',
-  },
+//   {
+//     title: 'Автосервисы и шиномонтаж',
+//     text: 'Онлайн-запись на ремонт, замену шин, диагностику. Удобное управление загрузкой боксов и мастеров.',
+//     image: '/assets/images/for-whom/for-whom-6.png',
+//   },
   {
     title: 'Фотостудии и видеосъёмка',
     text: 'Бронирование съёмок, студий и оборудования через систему онлайн-записи.',
     image: '/assets/images/for-whom/for-whom-7.png',
   },
-  {
-    title: 'Репетиторы и образовательные курсы',
-    text: 'Удобный приём заявок, управление расписанием занятий и уведомления ученикам.',
-    image: '/assets/images/for-whom/for-whom-8.png',
-  },
-  {
-    title: 'Мастера на выезд (ремонт, уборка и т.д.)',
-    text: 'Организация заявок по времени и району, возможность указания специализации и цен.',
-    image: '/assets/images/for-whom/for-whom-9.png',
-  }
+//   {
+//     title: 'Репетиторы и образовательные курсы',
+//     text: 'Удобный приём заявок, управление расписанием занятий и уведомления ученикам.',
+//     image: '/assets/images/for-whom/for-whom-8.png',
+//   },
+//   {
+//     title: 'Мастера на выезд (ремонт, уборка и т.д.)',
+//     text: 'Организация заявок по времени и району, возможность указания специализации и цен.',
+//     image: '/assets/images/for-whom/for-whom-9.png',
+//   }
 ];
 
 const questionData = [
@@ -209,91 +209,6 @@ export const Sabt = () => {
                 ))}
             </div>
         </Section>
-        <Section name='Отзывы клиентов' wrapperProps={{ className: classes.wrapper }}>
-            <div className={classes.section_body}>
-                <p className={classes.subtitle}>
-                    Мы ценим мнение наших клиентов и всегда готовы выслушать их отзывы. SABT стремится к постоянному улучшению качества своих услуг и удовлетворению потребностей пользователей.
-                    <br />
-                </p>
-            </div>
-            <div className={classes.reviews}>
-                <Swiper
-                    className={classes.Swiper}
-					pagination={{
-						enabled: true,
-						clickable: true,
-						el: '#reviews-pagination',
-						bulletClass: 'slider-custom-pagination-bullet',
-						bulletActiveClass: 'slider-custom-pagination-bullet-active',
-					}}
-					navigation={{
-						enabled: true,
-						nextEl: '#reviews-nav-next',
-						prevEl: '#reviews-nav-prev',
-					}}
-					slidesPerView={1}
-					spaceBetween={28}
-					modules={[Pagination, Navigation]}
-					breakpoints={{
-						1360: {
-							spaceBetween: 28,
-                            slidesPerView: 3
-						},
-						1024: {
-							spaceBetween: 20,
-                            slidesPerView: 2
-						}
-					}}>
-                    {reviewsData.map((item, index) => (
-                        <SwiperSlide key={index} className={classes.review}>
-                            <div className={classes.review_image}>
-                                <Image src={item.image} alt='image' width={100} height={100} />
-                            </div>
-                            <div className={classes.review_text}>
-                                <h3 className={classes.review_name}>{item.name}</h3>
-                                <p className={classes.text}>{item.text}</p>
-                            </div>
-                        </SwiperSlide>
-                    ))}
-                    </Swiper>
-                    <div className={classes.Navigation} >
-					<SliderNav  
-						className={classes.nav_buttons}
-						prevId="reviews-nav-prev"
-						nextId="reviews-nav-next"
-						theme='light'
-						/>
-    				</div>
-                    <div id={'reviews-pagination'}  
-                        className={clsx(
-                        "slider-custom-pagination",
-                        "slider-custom-pagination-light",
-                        classes.bullets
-                        )} >
-                    </div>
-            </div>
-                <Button 
-                    className={classes.review_button}
-                    variant='outlined'
-                    >
-                    Оставить отзыв
-                </Button>                    
-        </Section>
-        <Section className={classes.section} name='Партнёрам' wrapperProps={{ className: classes.wrapper }}>
-            <div className={classes.section_body}>
-                <p className={classes.subtitle}>
-                    Хочешь принимать брони через SABT?
-                    <br />
-                </p>
-                <Button
-                    bg='secondary' 
-                    buttonSize='medium' 
-                    onClick={toggle}
-                    >
-                    Подключить бизнес
-                </Button>
-            </div>                  
-        </Section>
         <Section name='Почему Sabt?' wrapperProps={{ className: classes.wrapper }}>
             <div className={classes.section_body}>
 
@@ -312,6 +227,92 @@ export const Sabt = () => {
                     ))}
             </div>                  
         </Section>
+        <Section className={classes.section} name='Партнёрам' wrapperProps={{ className: classes.wrapper }}>
+            <div className={classes.section_body}>
+                <p className={classes.subtitle}>
+                    Хочешь принимать брони через SABT?
+                    <br />
+                </p>
+                <Button
+                    bg='secondary' 
+                    buttonSize='medium' 
+                    onClick={toggle}
+                    >
+                    Подключить бизнес
+                </Button>
+            </div>                  
+        </Section>
+        <Section name='Отзывы клиентов' wrapperProps={{ className: classes.wrapper }}>
+            <div className={classes.section_body}>
+                <p className={classes.subtitle}>
+                    Мы ценим мнение наших клиентов и всегда готовы выслушать их отзывы. SABT стремится к постоянному улучшению качества своих услуг и удовлетворению потребностей пользователей.
+                    <br />
+                </p>
+            </div>
+            {/* <div className={classes.reviews}>
+                    <Swiper
+                        className={classes.Swiper}
+                        pagination={{
+                            enabled: true,
+                            clickable: true,
+                            el: '#reviews-pagination',
+                            bulletClass: 'slider-custom-pagination-bullet',
+                            bulletActiveClass: 'slider-custom-pagination-bullet-active',
+                        }}
+                        navigation={{
+                            enabled: true,
+                            nextEl: '#reviews-nav-next',
+                            prevEl: '#reviews-nav-prev',
+                        }}
+                        slidesPerView={1}
+                        spaceBetween={28}
+                        modules={[Pagination, Navigation]}
+                        breakpoints={{
+                            1360: {
+                                spaceBetween: 28,
+                                slidesPerView: 3
+                            },
+                            1024: {
+                                spaceBetween: 20,
+                                slidesPerView: 2
+                            }
+                        }}>
+                        {reviewsData.map((item, index) => (
+                            <SwiperSlide key={index} className={classes.review}>
+                                <div className={classes.review_image}>
+                                    <Image src={item.image} alt='image' width={100} height={100} />
+                                </div>
+                                <div className={classes.review_text}>
+                                    <h3 className={classes.review_name}>{item.name}</h3>
+                                    <p className={classes.text}>{item.text}</p>
+                                </div>
+                            </SwiperSlide>
+                        ))}
+                    </Swiper>
+                    <div className={classes.Navigation} >
+					<SliderNav  
+						className={classes.nav_buttons}
+						prevId="reviews-nav-prev"
+						nextId="reviews-nav-next"
+						theme='light'
+						/>
+    				</div>
+                    <div id={'reviews-pagination'}  
+                        className={clsx(
+                        "slider-custom-pagination",
+                        "slider-custom-pagination-light",
+                        classes.bullets
+                        )} >
+                    </div>
+            </div> */}
+                <Button 
+                    className={classes.review_button}
+                    variant='outlined'
+                    onClick={toggle}
+                    >
+                    Оставить отзыв
+                </Button>                    
+        </Section>
         <Section name='Вопросы' className={classes.section} wrapperProps={{ className: classes.wrapper }}>
             <ul className={classes.question_items}>
                 {questionData.map((e, index) => <li key={index} className={classes.question_item}>
@@ -327,7 +328,9 @@ export const Sabt = () => {
                 <Button component={Link} href='/faq' variant='contained' bg='secondary' >
                     Посмотреть все вопросы
                 </Button>
-                <Button component={Link} href='/faq' variant='contained' bg='secondary' >
+                <Button 
+                    onClick={toggle}
+                    variant='contained' bg='secondary' >
                     Задать вопросы
                 </Button>
             </div>
