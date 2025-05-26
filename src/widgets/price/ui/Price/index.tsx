@@ -1,5 +1,5 @@
 import classes from './about.module.scss'
-import { AboutContent } from '../PriceContent'
+import { PriceContent } from '../PriceContent'
 import useTranslation from 'next-translate/useTranslation'
 import { SolutionsSection } from '@widgets/solutions'
 import { Team } from '../Team'
@@ -78,7 +78,7 @@ export const Price = () => {
     {/* <Team />
     <SolutionsSection />
     <Timeline /> */}
-    <AboutContent />
+    <PriceContent />
     {/* <Gallery
         className={classes.gallery}
         images={galleryDate}

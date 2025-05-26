@@ -8,7 +8,7 @@ import { useApplicationStore } from '@widgets/application/model/applicationStore
 import { WhySection } from '@widgets/sabt/ui/Why'
 import Image from 'next/image'
 
-export const AboutContent = () => {
+export const PriceContent = () => {
     const { t } = useTranslation()
     const { toggle } = useApplicationStore(state => (state))
     return (

@@ -51,8 +51,8 @@
   }
 
   img {
-    @media (max-width: 920px) {
-      width: 80px;
+    @media (max-width: $tablet) {
+      width: 60px;
       height: 27px;
     }
   }

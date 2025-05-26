@@ -208,17 +208,22 @@
 
   img {
     @media (max-width: $tablet) {
-      width: 45px;
-      
+      width: 45px;      
     }
   }
 }
 .logo_bl {
   display: none;
+  
   @media (max-width: $desktopSmall) {
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    img {
+      width: 60px;
+      height: auto;
+    }
   }
 }
 

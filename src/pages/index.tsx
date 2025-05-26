@@ -3,7 +3,7 @@ import Head from "next/head";
 import { MainBanner } from "@widgets/mainBanner";
 import { PhotoGallery } from "@widgets/photoGallery";
 import { ServicesSection } from "@widgets/services";
-import { AboutContent } from "@widgets/price/ui/PriceContent";
+// import { AboutContent } from "@widgets/price/ui/PriceContent";
 import { SolutionsSection } from "@widgets/solutions";
 import { Team } from "@widgets/price/ui/Team";
 import { ProjectsSection } from "@widgets/projects";
